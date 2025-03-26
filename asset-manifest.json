@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/omconsulting/static/css/main.e6c13ad2.css",
+    "main.js": "/omconsulting/static/js/main.65c97890.js",
+    "static/js/453.efe04bab.chunk.js": "/omconsulting/static/js/453.efe04bab.chunk.js",
+    "static/media/comlogo.png": "/omconsulting/static/media/comlogo.0dcbf8cb5109c8f64603.png",
+    "index.html": "/omconsulting/index.html",
+    "main.e6c13ad2.css.map": "/omconsulting/static/css/main.e6c13ad2.css.map",
+    "main.65c97890.js.map": "/omconsulting/static/js/main.65c97890.js.map",
+    "453.efe04bab.chunk.js.map": "/omconsulting/static/js/453.efe04bab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.65c97890.js"
+  ]
+}
