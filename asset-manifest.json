@@ -1,16 +1,30 @@
 {
   "files": {
-    "main.css": "/omconsulting/static/css/main.e6c13ad2.css",
-    "main.js": "/omconsulting/static/js/main.65c97890.js",
+    "main.css": "/omconsulting/static/css/main.0f6e181f.css",
+    "main.js": "/omconsulting/static/js/main.d8fe8c3f.js",
     "static/js/453.efe04bab.chunk.js": "/omconsulting/static/js/453.efe04bab.chunk.js",
+    "static/media/team.jpg": "/omconsulting/static/media/team.25eac5cb2df1d5ac493b.jpg",
+    "static/media/fa-solid-900.ttf": "/omconsulting/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/Seo2.jpg": "/omconsulting/static/media/Seo2.e2e53027c1efcb9943fb.jpg",
+    "static/media/fa-brands-400.ttf": "/omconsulting/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/omconsulting/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/omconsulting/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/omconsulting/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/team2.jpg": "/omconsulting/static/media/team2.d60b4b4642cc301b91a3.jpg",
+    "static/media/seo1.jpg": "/omconsulting/static/media/seo1.0f8cfa432a7b6ed0ca6f.jpg",
+    "static/media/founder.webp": "/omconsulting/static/media/founder.3987e80fd58da02874e8.webp",
+    "static/media/fa-regular-400.woff2": "/omconsulting/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
     "static/media/comlogo.png": "/omconsulting/static/media/comlogo.0dcbf8cb5109c8f64603.png",
+    "static/media/seo3.webp": "/omconsulting/static/media/seo3.fe1bcf7c01c0fadc82d7.webp",
+    "static/media/fa-v4compatibility.ttf": "/omconsulting/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/omconsulting/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/omconsulting/index.html",
-    "main.e6c13ad2.css.map": "/omconsulting/static/css/main.e6c13ad2.css.map",
-    "main.65c97890.js.map": "/omconsulting/static/js/main.65c97890.js.map",
+    "main.0f6e181f.css.map": "/omconsulting/static/css/main.0f6e181f.css.map",
+    "main.d8fe8c3f.js.map": "/omconsulting/static/js/main.d8fe8c3f.js.map",
     "453.efe04bab.chunk.js.map": "/omconsulting/static/js/453.efe04bab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.65c97890.js"
+    "static/css/main.0f6e181f.css",
+    "static/js/main.d8fe8c3f.js"
   ]
 }
