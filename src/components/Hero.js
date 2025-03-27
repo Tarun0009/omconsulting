@@ -2,61 +2,61 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white flex items-center justify-center px-6 md:px-12">
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
-        <div>
-          <p className="text-gray-400 uppercase tracking-wide">Establish <span className="text-white font-bold">2011</span></p>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-4">
-            We Are <span className="text-green-400">Creative</span> Digital Agency
-          </h1>
-          <p className="text-gray-300 mt-6">
-            We are a creative agency with several services focused on quality and innovations for your business.
-          </p>
-          
-          {/* Stats */}
-          <div className="flex flex-wrap mt-8 gap-6">
-            <div>
-              <h2 className="text-3xl font-bold">12+</h2>
-              <p className="text-gray-400">Years of Experience</p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold">83K+</h2>
-              <p className="text-gray-400">Completed Projects</p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold">4.2K+</h2>
-              <p className="text-gray-400">Trusted Companies</p>
-            </div>
-          </div>
+    <section id="home" className="relative h-screen bg-gradient-to-br from-blue-700 to-blue-500 flex items-center justify-center">
+      {/* Video Background (optional) */}
+      {/* <video autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
+        <source src="/your-background-video.mp4" type="video/mp4" />
+      </video> */}
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-6xl">
+        {/* Premium Badge */}
+        <div className="mb-6 animate-fade-in-down">
+          <span className="bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold tracking-wide">
+            Award-Winning Digital Agency
+          </span>
         </div>
-        
-        {/* Right Content - Video Placeholder */}
-        <div className="relative">
-          <img
-            src="/your-video-thumbnail.jpg" // Replace with actual image path
-            alt="Video Thumbnail"
-            className="rounded-lg shadow-lg w-full"
-          />
-          <button className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-green-500 w-16 h-16 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
+
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up">
+          Transform Your <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Digital Growth</span>
+        </h1>
+
+        {/* Subheading */}
+        <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-75">
+          Data-driven marketing strategies that deliver <span className="font-semibold text-white">measurable ROI</span> and <span className="font-semibold text-white">sustainable growth</span>
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16 animate-fade-in-up delay-150">
+          <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-amber-500/30">
+            Start Free Consultation
+          </button>
+          <button className="border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 backdrop-blur-sm">
+            View Case Studies
           </button>
         </div>
+
+        {/* Stats Grid */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 text-white animate-fade-in-up delay-300">
+          {[
+            { value: "250+", label: "Satisfied Clients", icon: "👥" },
+            { value: "1.2M+", label: "Leads Generated", icon: "📈" },
+            { value: "98%", label: "Client Retention", icon: "💎" },
+            { value: "5x", label: "Average ROI", icon: "🚀" }
+          ].map((stat, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all">
+              <div className="text-4xl mb-2">{stat.icon}</div>
+              <div className="text-3xl font-bold mb-1">{stat.value}</div>
+              <div className="text-sm opacity-90">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
-      
-      {/* Trusted Brands */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-full max-w-5xl flex justify-between px-6 md:px-0">
-        <img src="/spotify-logo.png" alt="Spotify" className="h-8 opacity-70" />
-        <img src="/microsoft-logo.png" alt="Microsoft" className="h-8 opacity-70" />
-        <img src="/google-logo.png" alt="Google" className="h-8 opacity-70" />
-        <img src="/youtube-logo.png" alt="YouTube" className="h-8 opacity-70" />
-        <img src="/discord-logo.png" alt="Discord" className="h-8 opacity-70" />
-      </div>
-    </div>
+    </section>
   );
 };
 
