@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import logo from "../assets/comlogo.png";
 import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi';
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [selectedService, setSelectedService] = useState(''); // Store the selected service
+  const [isModalOpen, setIsModalOpen] = useState(false); // Controls modal visibility
 
   const services = {
     DigitalMarketing: [
@@ -29,18 +29,18 @@ const Navbar = () => {
       { 
         name: 'Social Media Designing', 
         subItems: [
-          { name: 'Reel Design', link: '#reel-design' },
-          { name: 'Pamphlet Design', link: '#pamphlet-design' },
-          { name: 'Newspaper Ad Design', link: '#newspaper-ad-design' },
-          { name: 'Catalog Design', link: '#catalog-design' }
+          { name: 'Reel Design', link: '#social-media-designing' },
+          { name: 'Pamphlet Design', link: '#social-media-designing' },
+          { name: 'Newspaper Ad Design', link: '#social-media-designing' },
+          { name: 'Catalog Design', link: '#social-media-designing' }
         ]
       }
     ]
   };
 
-  const toggleDropdown = (dropdown) => {
+  const toggleDropdown = useCallback((dropdown) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
-  };
+  }, [openDropdown]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -49,8 +49,7 @@ const Navbar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    console.log(selectedService);
     setIsModalOpen(false);
   };
 
@@ -92,6 +91,7 @@ const Navbar = () => {
                       <a 
                         href={item.link} 
                         className="block px-4 py-3 hover:bg-gray-700 text-sm"
+                        onClick={() => setSelectedService(item.name)} // Update selected service
                       >
                         {item.name}
                         {item.subItems && <HiChevronDown className="float-right h-4 w-4" />}
@@ -103,6 +103,7 @@ const Navbar = () => {
                               key={subIndex} 
                               href={subItem.link}
                               className="block px-4 py-3 hover:bg-gray-700 text-sm"
+                              onClick={() => setSelectedService(subItem.name)} // Update selected service
                             >
                               {subItem.name}
                             </a>
@@ -142,7 +143,7 @@ const Navbar = () => {
           <div className="pt-2 pb-3 space-y-1">
             <a href="/" className="block px-3 py-2 hover:bg-gray-800">Home</a>
             <a href="#about" className="block px-3 py-2 hover:bg-gray-800">About</a>
-            
+
             {Object.entries(services).map(([key, items]) => (
               <div key={key} className="relative">
                 <button
@@ -152,11 +153,15 @@ const Navbar = () => {
                   {key.split(/(?=[A-Z])/).join(' ')}
                   <HiChevronDown className={`transform transition-transform ${openDropdown === key ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 <div className={`${openDropdown === key ? 'block' : 'hidden'} pl-4`}>
                   {items.map((item, index) => (
                     <div key={index}>
-                      <a href={item.link} className="block px-3 py-2 text-sm hover:bg-gray-700">
+                      <a
+                        href={item.link}
+                        className="block px-3 py-2 text-sm hover:bg-gray-700"
+                        onClick={() => setSelectedService(item.name)} // Update selected service
+                      >
                         {item.name}
                       </a>
                       {item.subItems?.map((subItem, subIndex) => (
@@ -164,6 +169,7 @@ const Navbar = () => {
                           key={subIndex} 
                           href={subItem.link}
                           className="block px-6 py-2 text-sm hover:bg-gray-700"
+                          onClick={() => setSelectedService(subItem.name)} // Update selected service
                         >
                           {subItem.name}
                         </a>
@@ -184,73 +190,32 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
       </div>
 
-      {/* Modal */}
+      {/* Modal for Booking */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-md mx-4">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Book Consulting</h2>
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                <HiX className="h-6 w-6" />
-              </button>
-            </div>
-            
+        <div className="modal fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+          <div className="modal-content bg-white p-6 rounded-lg shadow-lg w-96">
+            <button onClick={() => setIsModalOpen(false)} className="absolute top-2 right-2 text-gray-600">×</button>
+            <h2 className="text-2xl mb-4">Consulting Appointment</h2>
             <form onSubmit={handleSubmit}>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea
-                    rows="4"
-                    required
-                    className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  />
-                </div>
-                
-                <div className="flex justify-end space-x-3">
-                  <button
-                    type="button"
-                    onClick={() => setIsModalOpen(false)}
-                    className="px-4 py-2 text-gray-700 hover:text-gray-900"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-4 py-2 bg-yellow-500 text-gray-900 rounded-lg hover:bg-yellow-400"
-                  >
-                    Submit
-                  </button>
-                </div>
+              <p className="mb-2">You selected: <strong>{selectedService}</strong></p>
+              <div className="mb-4">
+                <label className="block mb-2 text-gray-700">Enter your name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                  required
+                />
               </div>
+              <button
+                type="submit"
+                className="w-full bg-yellow-500 text-gray-900 px-6 py-2 rounded-full hover:bg-yellow-400 transition-colors duration-200 font-semibold"
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>

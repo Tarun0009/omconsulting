@@ -1,101 +1,128 @@
-import { FaInstagram, FaChartLine, FaHashtag, FaCommentDollar } from 'react-icons/fa';
+import facebook from "../assets/socialmedia/facebook.png";
+import insta from "../assets/socialmedia/instagram.jpg";
+import linky from "../assets/socialmedia/linkedin.jpg";
+import pay from "../assets/socialmedia/pay.webp";
 
 const SocialMediaMarketing = () => {
   return (
-    <section id="social-media-marketing" className="bg-gradient-to-br from-purple-900 to-blue-900 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Social Media <span className="text-purple-400">Mastery</span>
-          </h2>
-          <p className="text-purple-100 text-lg max-w-2xl mx-auto">
-            Transform your social presence into a powerful growth engine with data-driven strategies
-          </p>
-        </div>
+    <section
+      id="social-media-marketing"
+      className="bg-gray-100 py-20 px-6 sm:px-8"
+      aria-labelledby="social-media-marketing-heading"
+    >
+      <div className="text-center mb-12">
+        <h2
+          id="social-media-marketing-heading"
+          className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4"
+        >
+          Social Media Marketing Services
+        </h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          At OM Consultancy, we help you enhance your brand’s social media presence with results-driven strategies.
+          From strategy development to execution, we deliver measurable results to help your business grow online.
+        </p>
+      </div>
 
-        {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left Column - Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src="/social-media-dashboard.jpg" 
-              alt="Social media analytics dashboard" 
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 flex items-end p-6">
-              <h3 className="text-white text-xl font-semibold">
-                Real-time Performance Tracking
-              </h3>
-            </div>
-          </div>
-
-          {/* Right Column - Services */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-              <FaInstagram className="w-10 h-10 text-pink-500 mb-4" />
-              <h3 className="text-white text-xl font-semibold mb-2">Platform Expertise</h3>
-              <p className="text-purple-100">
-                Instagram, Facebook, LinkedIn, TikTok & Twitter optimization
-              </p>
-            </div>
-
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-              <FaChartLine className="w-10 h-10 text-green-400 mb-4" />
-              <h3 className="text-white text-xl font-semibold mb-2">ROI Tracking</h3>
-              <p className="text-purple-100">
-                Conversion-focused campaigns with clear performance metrics
-              </p>
-            </div>
-
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-              <FaHashtag className="w-10 h-10 text-blue-400 mb-4" />
-              <h3 className="text-white text-xl font-semibold mb-2">Viral Strategies</h3>
-              <p className="text-purple-100">
-                Trend-driven content that boosts engagement & reach
-              </p>
-            </div>
-
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-              <FaCommentDollar className="w-10 h-10 text-yellow-400 mb-4" />
-              <h3 className="text-white text-xl font-semibold mb-2">Paid Advertising</h3>
-              <p className="text-purple-100">
-                Targeted social ads that convert at scale
-              </p>
-            </div>
+      {/* Services */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        {/* Instagram Marketing */}
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl duration-300">
+          <img
+            src={insta}
+            alt="Instagram Marketing Services"
+            className="w-full h-56 object-cover object-center mb-4 rounded-xl transition-transform duration-500 ease-in-out transform hover:scale-110"
+          />
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Instagram Marketing</h3>
+            <p className="text-gray-600 mb-4">
+              Leverage Instagram's visual platform to reach a larger audience and foster meaningful engagement. We help you create eye-catching posts, impactful stories, and influencer partnerships that drive both brand awareness and sales.
+            </p>
+            <ul className="text-left text-gray-600 list-disc list-inside">
+              <li>Strategic content creation and planning</li>
+              <li>Hashtag strategy to improve discoverability</li>
+              <li>Instagram Ads management and optimization</li>
+              <li>Community engagement and influencer collaborations</li>
+            </ul>
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-white/5 p-6 rounded-xl text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">4.8x</div>
-            <p className="text-purple-200">Average Engagement Boost</p>
-          </div>
-          <div className="bg-white/5 p-6 rounded-xl text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">1.2M+</div>
-            <p className="text-purple-200">Monthly Impressions</p>
-          </div>
-          <div className="bg-white/5 p-6 rounded-xl text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">63%</div>
-            <p className="text-purple-200">Cost Reduction</p>
+        {/* Facebook Ads */}
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl duration-300">
+          <img
+            src={facebook}
+            alt="Facebook Advertising Services"
+            className="w-full h-56 object-cover object-center mb-4 rounded-xl transition-transform duration-500 ease-in-out transform hover:scale-110"
+          />
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Facebook Ads</h3>
+            <p className="text-gray-600 mb-4">
+              Facebook Ads are a powerful tool to reach your target audience with precision. Our team will design, implement, and optimize campaigns to ensure maximum ROI, from lead generation to product promotion.
+            </p>
+            <ul className="text-left text-gray-600 list-disc list-inside">
+              <li>Targeted audience segmentation</li>
+              <li>Ad creatives and copywriting</li>
+              <li>Budget optimization for the best results</li>
+              <li>Comprehensive performance reporting</li>
+            </ul>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-white/10 backdrop-blur-sm py-12 px-8 rounded-2xl max-w-3xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Dominate Social Media?
-          </h3>
-          <p className="text-purple-200 mb-8 max-w-xl mx-auto">
-            Let's create a custom strategy that aligns with your business goals
-          </p>
-          <button className="bg-gradient-to-r from-purple-400 to-blue-400 text-purple-900 px-8 py-3 rounded-lg font-bold hover:shadow-lg transition-all">
-            Launch Social Strategy
-          </button>
+        {/* LinkedIn Strategy */}
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl duration-300">
+          <img
+            src={linky}
+            alt="LinkedIn Marketing Strategy"
+            className="w-full h-56 object-cover object-center mb-4 rounded-xl transition-transform duration-500 ease-in-out transform hover:scale-110"
+          />
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">LinkedIn Strategy</h3>
+            <p className="text-gray-600 mb-4">
+              Build your professional network, grow your influence, and connect with decision-makers. Our LinkedIn marketing services include content strategy, sponsored posts, and networking tactics to establish your brand as a thought leader in your industry.
+            </p>
+            <ul className="text-left text-gray-600 list-disc list-inside">
+              <li>Profile optimization and branding</li>
+              <li>Content creation and engagement</li>
+              <li>LinkedIn Ads and lead generation</li>
+              <li>Building relationships with industry professionals</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Paid Advertising */}
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl duration-300">
+          <img
+            src={pay}
+            alt="Paid Advertising Services"
+            className="w-full h-56 object-cover object-center mb-4 rounded-xl transition-transform duration-500 ease-in-out transform hover:scale-110"
+          />
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Paid Advertising</h3>
+            <p className="text-gray-600 mb-4">
+              Increase your online presence with targeted paid ads across multiple platforms. We specialize in running cost-effective campaigns on Google, Facebook, Instagram, and more to ensure your business reaches the right people.
+            </p>
+            <ul className="text-left text-gray-600 list-disc list-inside">
+              <li>Targeting and retargeting strategies</li>
+              <li>Ad copywriting and design</li>
+              <li>Budget management and optimization</li>
+              <li>Advanced analytics and performance tracking</li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      {/* Call to Action Section */}
+<div className="mt-10 text-center bg-gradient-to-r from-gray-300 to-gray-400 text-gray-800 py-8 px-4 rounded-lg shadow-md max-w-md mx-auto">
+  <h3 className="text-2xl sm:text-3xl font-semibold mb-3">
+    Ready to Boost Your Brand?
+  </h3>
+  <p className="text-sm sm:text-base mb-4">
+    Let’s create a strategy that drives growth and achieves your business goals.
+  </p>
+  <button className="bg-gray-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-gray-700 transition-all hover:scale-105">
+    Get Started
+  </button>
+</div>
+
     </section>
   );
 };

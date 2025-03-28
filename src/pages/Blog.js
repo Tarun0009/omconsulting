@@ -37,10 +37,18 @@ const Blog = () => {
         </p>
 
         {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <div key={post.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+            <div
+              key={post.id}
+              className="bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-2xl transition-shadow"
+            >
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-800">{post.title}</h3>
                 <p className="text-gray-600 mt-2">{post.excerpt}</p>

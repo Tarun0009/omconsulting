@@ -1,117 +1,143 @@
-import { FaCode, FaMobileAlt, FaReact, FaServer, FaRocket } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiNodedotjs, SiMongodb } from 'react-icons/si';
+import { FaCode, FaMobileAlt, FaReact, FaServer, FaRocket } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiNodedotjs, SiMongodb } from "react-icons/si";
+import { motion } from "framer-motion";
+
+const techStackIcons = [FaReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiMongodb];
 
 const WebDev = () => {
   return (
-    <section id="web-development" className="bg-gradient-to-br from-blue-50 to-purple-50 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id = "web-development" className="bg-gradient-to-br from-gray-50 to-gray-200 py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto">
+        
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Modern Web Development <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Solutions</span>
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            We craft high-performance websites that drive engagement, conversions, and business growth
+        <div className="text-center mb-8">
+          <motion.h1
+            className="text-3xl font-extrabold text-gray-900 mb-2"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            Modern Web Development{" "}
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </motion.h1>
+          <p className="text-gray-700 text-sm max-w-lg mx-auto">
+            High-performance websites designed to enhance engagement and drive business growth.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          {/* Left Column - Frontend */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-100 p-4 rounded-xl">
-                <FaCode className="w-8 h-8 text-blue-600" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          
+          {/* Frontend Development */}
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-blue-100 p-3 rounded-md">
+                <FaCode className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-semibold">Frontend Development</h3>
+              <h2 className="text-lg font-semibold">Frontend Development</h2>
             </div>
-            <ul className="space-y-4 text-gray-600">
-              <li className="flex items-center gap-3">
-                <FaMobileAlt className="w-5 h-5 text-purple-600" />
-                Responsive, mobile-first designs
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex items-center gap-2">
+                <FaMobileAlt className="w-4 h-4 text-purple-500" />
+                Mobile-friendly & responsive designs
               </li>
-              <li className="flex items-center gap-3">
-                <FaReact className="w-5 h-5 text-blue-400" />
-                React & Next.js applications
+              <li className="flex items-center gap-2">
+                <FaReact className="w-4 h-4 text-blue-400" />
+                React & Next.js web applications
               </li>
-              <li className="flex items-center gap-3">
-                <SiTailwindcss className="w-5 h-5 text-blue-400" />
-                Tailwind CSS frameworks
+              <li className="flex items-center gap-2">
+                <SiTailwindcss className="w-4 h-4 text-blue-500" />
+                Tailwind CSS for sleek UI
               </li>
-              <li className="flex items-center gap-3">
-                <FaRocket className="w-5 h-5 text-purple-600" />
+              <li className="flex items-center gap-2">
+                <FaRocket className="w-4 h-4 text-purple-500" />
                 Performance optimization
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          {/* Right Column - Backend */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-purple-100 p-4 rounded-xl">
-                <FaServer className="w-8 h-8 text-purple-600" />
+          {/* Backend Development */}
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-purple-500"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-purple-100 p-3 rounded-md">
+                <FaServer className="w-6 h-6 text-purple-600" />
               </div>
-              <h3 className="text-2xl font-semibold">Backend Development</h3>
+              <h2 className="text-lg font-semibold">Backend Development</h2>
             </div>
-            <ul className="space-y-4 text-gray-600">
-              <li className="flex items-center gap-3">
-                <SiNodedotjs className="w-5 h-5 text-green-600" />
-                Node.js & Express.js
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex items-center gap-2">
+                <SiNodedotjs className="w-4 h-4 text-green-600" />
+                Scalable Node.js & Express APIs
               </li>
-              <li className="flex items-center gap-3">
-                <SiMongodb className="w-5 h-5 text-green-400" />
-                MongoDB & PostgreSQL
+              <li className="flex items-center gap-2">
+                <SiMongodb className="w-4 h-4 text-green-500" />
+                MongoDB & PostgreSQL databases
               </li>
-              <li className="flex items-center gap-3">
-                <FaRocket className="w-5 h-5 text-purple-600" />
-                REST & GraphQL APIs
+              <li className="flex items-center gap-2">
+                <FaRocket className="w-4 h-4 text-purple-500" />
+                RESTful & GraphQL API integrations
               </li>
-              <li className="flex items-center gap-3">
-                <FaServer className="w-5 h-5 text-blue-400" />
-                Cloud integration
+              <li className="flex items-center gap-2">
+                <FaServer className="w-4 h-4 text-blue-500" />
+                Cloud deployment & hosting
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Tech Stack */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-center mb-8">Our Technology Stack</h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {[FaReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiMongodb].map((Icon, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <Icon className="w-12 h-12 text-gray-700" />
+        {/* Tech Stack Icons - Moving Animation */}
+        <motion.div
+          className="overflow-hidden whitespace-nowrap py-4"
+          initial={{ x: "100%" }}
+          animate={{ x: "-100%" }}
+          transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+        >
+          <div className="flex gap-6">
+            {techStackIcons.map((Icon, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border-b-2 border-gray-300"
+              >
+                <Icon className="w-8 h-8 text-gray-700" />
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        {/* Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-blue-600 text-white p-8 rounded-2xl text-center">
-            <div className="text-4xl font-bold mb-2">250+</div>
-            <p className="text-sm">Projects Delivered</p>
-          </div>
-          <div className="bg-purple-600 text-white p-8 rounded-2xl text-center">
-            <div className="text-4xl font-bold mb-2">99%</div>
-            <p className="text-sm">Client Satisfaction</p>
-          </div>
-          <div className="bg-blue-600 text-white p-8 rounded-2xl text-center">
-            <div className="text-4xl font-bold mb-2">4.8s</div>
-            <p className="text-sm">Avg Load Time</p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center bg-white py-12 px-8 rounded-2xl shadow-xl">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Build Your Digital Presence?</h3>
-          <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-            Let's create a web experience that converts visitors into customers
+        {/* Call-to-Action (CTA) */}
+        <motion.div
+          className="max-w-sm mx-auto text-center bg-white py-4 px-4 rounded-lg shadow-md border border-gray-200 mt-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <h2 className="text-sm font-semibold text-gray-900 mb-2">
+            Ready to Elevate Your Online Presence?
+          </h2>
+          <p className="text-gray-600 text-xs mb-3">
+            Let's build a web experience that engages and converts.
           </p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-shadow">
-            Start Your Project
+          <button
+            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 text-sm rounded-md font-medium 
+            hover:scale-105 transition-transform duration-200 shadow-md"
+            aria-label="Get Started with Web Development Services"
+          >
+            Get Started
           </button>
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );

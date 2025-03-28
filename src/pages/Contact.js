@@ -2,11 +2,18 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/f
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="bg-gray-50 py-12 md:py-16">
+    <section
+      id="contact"
+      className="bg-gray-50 py-12 md:py-16"
+      aria-labelledby="contact-heading"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white/50 backdrop-blur-sm rounded-xl shadow-sm p-6 md:p-8 lg:p-10 border border-white/20">
           <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+            <h2
+              id="contact-heading"
+              className="text-2xl md:text-3xl font-bold text-gray-900 mb-2"
+            >
               Get in Touch
             </h2>
             <p className="text-gray-600 text-sm md:text-base max-w-md mx-auto">
@@ -26,13 +33,21 @@ const ContactSection = () => {
                   </li>
                   <li>
                     <strong className="block font-medium text-gray-800">Phone</strong>
-                    <a href="tel:+1234567890" className="text-blue-600 hover:underline">
+                    <a
+                      href="tel:+1234567890"
+                      className="text-blue-600 hover:underline"
+                      aria-label="Call Us"
+                    >
                       +123-456-7890
                     </a>
                   </li>
                   <li>
                     <strong className="block font-medium text-gray-800">Email</strong>
-                    <a href="mailto:youremail@example.com" className="text-blue-600 hover:underline">
+                    <a
+                      href="mailto:youremail@example.com"
+                      className="text-blue-600 hover:underline"
+                      aria-label="Email Us"
+                    >
                       youremail@example.com
                     </a>
                   </li>
@@ -42,23 +57,23 @@ const ContactSection = () => {
               <div className="pt-6 border-t border-gray-200">
                 <h3 className="text-base font-medium text-gray-900 mb-4">Follow Us</h3>
                 <div className="flex justify-center md:justify-start space-x-4">
-                  {[
-                    { Icon: FaFacebookF, url: 'https://facebook.com', color: 'hover:text-blue-600', label: 'Facebook' },
+                  {[{ Icon: FaFacebookF, url: 'https://facebook.com', color: 'hover:text-blue-600', label: 'Facebook' },
                     { Icon: FaTwitter, url: 'https://twitter.com', color: 'hover:text-blue-400', label: 'Twitter' },
                     { Icon: FaLinkedinIn, url: 'https://linkedin.com', color: 'hover:text-blue-700', label: 'LinkedIn' },
-                    { Icon: FaInstagram, url: 'https://instagram.com', color: 'hover:text-pink-600', label: 'Instagram' },
-                  ].map(({ Icon, url, color, label }, index) => (
-                    <a
-                      key={index}
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`text-gray-500 ${color} transition-colors`}
-                      aria-label={label}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </a>
-                  ))}
+                    { Icon: FaInstagram, url: 'https://instagram.com', color: 'hover:text-pink-600', label: 'Instagram' }].map(
+                    ({ Icon, url, color, label }, index) => (
+                      <a
+                        key={index}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-gray-500 ${color} transition-colors`}
+                        aria-label={label}
+                      >
+                        <Icon className="w-5 h-5" />
+                      </a>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -111,7 +126,11 @@ const ContactSection = () => {
                   </button>
                   <p className="mt-3 text-xs text-gray-500 text-center">
                     By submitting, you agree to our{' '}
-                    <a href="/privacy-policy" className="text-blue-600 hover:underline">
+                    <a
+                      href="/privacy-policy"
+                      className="text-blue-600 hover:underline"
+                      aria-label="Privacy Policy"
+                    >
                       privacy policy
                     </a>
                   </p>

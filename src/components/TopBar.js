@@ -6,26 +6,26 @@ const TopBar = () => {
       name: 'Facebook',
       url: 'https://facebook.com',
       icon: 'fab fa-facebook-f',
-      color: 'hover:text-[#1877f2]'
+      color: 'hover:text-[#1877f2]',
     },
     {
       name: 'Twitter',
       url: 'https://twitter.com',
       icon: 'fab fa-twitter',
-      color: 'hover:text-[#1da1f2]'
+      color: 'hover:text-[#1da1f2]',
     },
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com',
       icon: 'fab fa-linkedin-in',
-      color: 'hover:text-[#0a66c2]'
+      color: 'hover:text-[#0a66c2]',
     },
     {
       name: 'Instagram',
       url: 'https://instagram.com',
       icon: 'fab fa-instagram',
-      color: 'hover:text-[#e4405f]'
-    }
+      color: 'hover:text-[#e4405f]',
+    },
   ];
 
   return (
@@ -37,26 +37,26 @@ const TopBar = () => {
             <a 
               href="tel:+1234567890" 
               className="flex items-center hover:text-white transition-colors duration-300"
-              aria-label="Call us"
+              aria-label="Call us at +1 234 567 890"
             >
-              <i className="fas fa-phone-alt mr-2 text-sm"></i>
+              <i className="fas fa-phone-alt mr-2 text-sm" aria-hidden="true"></i>
               <span className="text-sm">+1 234 567 890</span>
             </a>
             
-            <span className="hidden md:inline-block">|</span>
+            <span className="hidden md:inline-block text-gray-400">|</span>
             
             <a 
               href="mailto:info@example.com" 
               className="flex items-center hover:text-white transition-colors duration-300"
-              aria-label="Email us"
+              aria-label="Email us at info@example.com"
             >
-              <i className="fas fa-envelope mr-2 text-sm"></i>
+              <i className="fas fa-envelope mr-2 text-sm" aria-hidden="true"></i>
               <span className="text-sm">info@example.com</span>
             </a>
           </div>
 
           {/* Social Media */}
-          <div className="flex items-center space-x-5">
+          <div className="flex items-center space-x-5 mt-2 md:mt-0">
             {socialMedia.map((social, index) => (
               <a
                 key={index}
@@ -66,10 +66,9 @@ const TopBar = () => {
                 className={`text-lg ${social.color} transition-all duration-300 hover:scale-110`}
                 aria-label={`Visit our ${social.name} page`}
               >
-                <i className={social.icon}></i>
+                <i className={social.icon} aria-hidden="true"></i>
               </a>
             ))}
-            
           </div>
         </div>
       </div>

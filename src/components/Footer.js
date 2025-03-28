@@ -28,7 +28,11 @@ const Footer = () => {
           <ul className="space-y-1 text-sm text-gray-600 text-center md:text-left">
             {["Home", "About", "Blog", "Testimonial"].map((item, index) => (
               <li key={index}>
-                <a href={`#${item.toLowerCase()}`} className="hover:underline hover:text-blue-500 transition-colors">
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:underline hover:text-blue-500 transition-colors"
+                  aria-label={`Go to ${item} section`}
+                >
                   {item}
                 </a>
               </li>
@@ -42,7 +46,11 @@ const Footer = () => {
           <ul className="space-y-1 text-sm text-gray-600 text-center md:text-left">
             {["SEO Optimization", "Social Media Marketing", "Content Marketing", "Paid Advertising", "Email Marketing", "WhatsApp Marketing", "SMS Marketing"].map((service, index) => (
               <li key={index}>
-                <a href={`#${service.toLowerCase().replace(/\s/g, "-")}`} className="hover:underline hover:text-blue-500 transition-colors">
+                <a
+                  href={`#${service.toLowerCase().replace(/\s/g, "-")}`}
+                  className="hover:underline hover:text-blue-500 transition-colors"
+                  aria-label={`Learn more about ${service}`}
+                >
                   {service}
                 </a>
               </li>
@@ -56,7 +64,11 @@ const Footer = () => {
           <ul className="space-y-1 text-sm text-gray-600 text-center md:text-left">
             {["Web Development", "App Development", "E-Commerce Solution"].map((service, index) => (
               <li key={index}>
-                <a href={`#${service.toLowerCase().replace(/\s/g, "-")}`} className="hover:underline hover:text-blue-500 transition-colors">
+                <a
+                  href={`#${service.toLowerCase().replace(/\s/g, "-")}`}
+                  className="hover:underline hover:text-blue-500 transition-colors"
+                  aria-label={`Learn more about ${service}`}
+                >
                   {service}
                 </a>
               </li>
@@ -70,7 +82,11 @@ const Footer = () => {
           <ul className="space-y-1 text-sm text-gray-600 text-center md:text-left">
             {["Logo Designing", "Banner Designing", "Social Media Designing"].map((service, index) => (
               <li key={index}>
-                <a href={`#${service.toLowerCase().replace(/\s/g, "-")}`} className="hover:underline hover:text-blue-500 transition-colors">
+                <a
+                  href={`#${service.toLowerCase().replace(/\s/g, "-")}`}
+                  className="hover:underline hover:text-blue-500 transition-colors"
+                  aria-label={`Learn more about ${service}`}
+                >
                   {service}
                 </a>
               </li>
@@ -86,9 +102,9 @@ const Footer = () => {
           <p className="text-sm text-gray-600">📍 123 Business Street, Noida, Uttar Pradesh, India</p>
           <div className="flex space-x-4 mt-3">
             {["facebook", "twitter", "linkedin", "instagram", "youtube"].map((platform, index) => (
-              <a 
-                key={index} 
-                href={`https://${platform}.com`} 
+              <a
+                key={index}
+                href={`https://${platform}.com`}
                 className="text-gray-600 hover:text-blue-500 transition-colors"
                 aria-label={`Visit our ${platform} page`}
               >
@@ -103,10 +119,11 @@ const Footer = () => {
           <p className="text-sm text-gray-600">
             © 2025 OM Consulting | All rights reserved.
             {["Privacy", "Terms", "FAQ"].map((item, index) => (
-              <a 
-                key={index} 
-                href={`#${item.toLowerCase()}`} 
+              <a
+                key={index}
+                href={`#${item.toLowerCase()}`}
                 className="ml-4 hover:text-blue-500 transition-colors"
+                aria-label={`Read our ${item} policy`}
               >
                 {item}
               </a>

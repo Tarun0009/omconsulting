@@ -72,6 +72,7 @@ const App = () => {
       <Banner/>
       {/* Social Media Designing */}
       <SocialMediaDesigning/>
+      
       {/* Blog Section */}
       <Blog/>
       {/* Contact Section */}
