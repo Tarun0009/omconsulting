@@ -30,7 +30,7 @@ const Navbar = () => {
       subItems: [
         { name: "Web Development", path: "/web-development" },
         { name: "App Development", path: "/app-development" },
-        { name: "E-Commerce Solutions", path: "/ecommerce-solutions" },
+        { name: "E-Commerce Solutions", path: "/e-commerce-solutions" },
       ]
     },
     {
@@ -111,6 +111,8 @@ const Navbar = () => {
                     ))}
                   </div>
                 )}
+                 {/* Invisible spacer to prevent gap */}
+                  <div className="absolute inset-x-0 top-full h-2" />
               </div>
             ))}
             

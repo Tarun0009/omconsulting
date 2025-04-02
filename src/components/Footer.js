@@ -40,8 +40,8 @@ const Footer = () => {
               <li><Link to="/" className="hover:text-yellow-500">Home</Link></li>
               <li><Link to="/about" className="hover:text-yellow-500">About Us</Link></li>
               <li><Link to="/digital-marketing" className="hover:text-yellow-500">Digital Marketing Services</Link></li>
-              <li><Link to="/development-services" className="hover:text-yellow-500">Development</Link></li>
-              <li><Link to="designing-services" className="hover:text-yellow-500">Designing</Link></li>
+              <li><Link to="/development" className="hover:text-yellow-500">Development</Link></li>
+              <li><Link to="/designing" className="hover:text-yellow-500">Designing</Link></li>
               <li><Link to="/contact" className="hover:text-yellow-500">Contact Us</Link></li>
               <li><Link to="/blog" className="hover:text-yellow-500">Blog</Link></li> {/* Added Blog link */}
             </ul>
@@ -53,6 +53,7 @@ const Footer = () => {
             <ul className="space-y-1 text-gray-400 text-xs">
               <li><Link to="web-development" className="hover:text-yellow-500">Web Development</Link></li>
               <li><Link to="app-development" className="hover:text-yellow-500">App Development</Link></li>
+              <li><Link to="e-commerce-solutions" className="hover:text-yellow-500">E-Commerce Solutions</Link></li>
               <li><Link to="seo-optimization" className="hover:text-yellow-500">SEO Optimization</Link></li>
               <li><Link to="email-marketing" className="hover:text-yellow-500">Email Marketing</Link></li>
               <li><Link to="social-media-marketing" className="hover:text-yellow-500">Social Media Marketing</Link></li>
