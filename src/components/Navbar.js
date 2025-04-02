@@ -162,6 +162,8 @@ const Navbar = () => {
             <nav className="space-y-4">
               <Link to="/" className="block py-2 hover:text-yellow-500" onClick={handleMobileLinkClick}>Home</Link>
               <Link to="/about" className="block py-2 hover:text-yellow-500" onClick={handleMobileLinkClick}>About</Link>
+  
+              
               
               {services.map((service) => (
                 <div key={service.name} className="space-y-2">

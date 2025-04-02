@@ -14,7 +14,7 @@ const WhatsappMarketing = () => {
           <div className="inline-flex items-center bg-gray-200 px-4 py-2 rounded-full mb-4">
             <FaWhatsapp className="text-xl mr-2 text-green-500" />
             <span className="text-sm font-medium">
-              OM Consultancy - Trusted WhatsApp Marketing Partner
+              OM Consulting - Trusted WhatsApp Marketing Partner
             </span>
           </div>
 

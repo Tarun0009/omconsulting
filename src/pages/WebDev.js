@@ -1,6 +1,7 @@
 import { FaCode, FaMobileAlt, FaReact, FaServer, FaRocket } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiNodedotjs, SiMongodb } from "react-icons/si";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const techStackIcons = [FaReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiMongodb];
 
@@ -117,26 +118,27 @@ const WebDev = () => {
         </motion.div>
 
         {/* Call-to-Action (CTA) */}
-        <motion.div
-          className="max-w-sm mx-auto text-center bg-white py-4 px-4 rounded-lg shadow-md border border-gray-200 mt-6"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          <h2 className="text-sm font-semibold text-gray-900 mb-2">
-            Ready to Elevate Your Online Presence?
-          </h2>
-          <p className="text-gray-600 text-xs mb-3">
-            Let's build a web experience that engages and converts.
-          </p>
-          <button
-            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 text-sm rounded-md font-medium 
-            hover:scale-105 transition-transform duration-200 shadow-md"
-            aria-label="Get Started with Web Development Services"
-          >
-            Get Started
-          </button>
-        </motion.div>
+<motion.div
+  className="max-w-sm mx-auto text-center bg-white py-4 px-4 rounded-lg shadow-md border border-gray-200 mt-6"
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.4 }}
+>
+  <h2 className="text-sm font-semibold text-gray-900 mb-2">
+    Ready to Elevate Your Online Presence?
+  </h2>
+  <p className="text-gray-600 text-xs mb-3">
+    Let's build a web experience that engages and converts.
+  </p>
+  <Link
+    to="/contact"
+    className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 text-sm rounded-md font-medium 
+    hover:scale-105 transition-transform duration-200 shadow-md block w-fit mx-auto"
+    aria-label="Get Started with Web Development Services"
+  >
+    Get Started
+  </Link>
+</motion.div>
 
       </div>
     </section>

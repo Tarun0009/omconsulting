@@ -1,4 +1,5 @@
 import banner from "../assets/design/banner.jpg";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -55,9 +56,11 @@ const Banner = () => {
                 <p className="text-xs text-gray-600">15+ years of expertise | 5000+ campaigns | 24/7 support</p>
               </div>
             </div>
-            <button className="bg-blue-800 text-white px-6 py-3 rounded-full text-md font-bold hover:bg-blue-900 transition-all duration-300 shadow-md hover:shadow-xl">
-              Start Your Banner Project →
+            <Link to="/contact">
+            <button className="bg-blue-800 text-white px-6 py-3 mt-3 rounded-full text-md font-bold hover:bg-blue-900 transition-all duration-300 shadow-md hover:shadow-xl">
+            Start Your Banner Project →
             </button>
+            </Link>
           </div>
         </div>
 
