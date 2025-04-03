@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/omconsulting/static/css/main.09f65998.css",
-    "main.js": "/omconsulting/static/js/main.3f6567b7.js",
+    "main.js": "/omconsulting/static/js/main.729a739b.js",
     "static/js/553.be73eecc.chunk.js": "/omconsulting/static/js/553.be73eecc.chunk.js",
-    "static/js/159.229cdab1.chunk.js": "/omconsulting/static/js/159.229cdab1.chunk.js",
-    "static/js/782.f32bf0c0.chunk.js": "/omconsulting/static/js/782.f32bf0c0.chunk.js",
+    "static/js/159.98b84475.chunk.js": "/omconsulting/static/js/159.98b84475.chunk.js",
+    "static/js/782.4231d5be.chunk.js": "/omconsulting/static/js/782.4231d5be.chunk.js",
     "static/js/457.6fdc29c0.chunk.js": "/omconsulting/static/js/457.6fdc29c0.chunk.js",
     "static/js/405.997a7d8f.chunk.js": "/omconsulting/static/js/405.997a7d8f.chunk.js",
     "static/js/128.e977bb11.chunk.js": "/omconsulting/static/js/128.e977bb11.chunk.js",
@@ -20,9 +20,8 @@
     "static/js/272.1cd48543.chunk.js": "/omconsulting/static/js/272.1cd48543.chunk.js",
     "static/js/888.fd898588.chunk.js": "/omconsulting/static/js/888.fd898588.chunk.js",
     "static/js/191.2ce604f2.chunk.js": "/omconsulting/static/js/191.2ce604f2.chunk.js",
-    "static/js/615.5db3727b.chunk.js": "/omconsulting/static/js/615.5db3727b.chunk.js",
+    "static/js/615.9f124fd5.chunk.js": "/omconsulting/static/js/615.9f124fd5.chunk.js",
     "static/js/453.1f190cd3.chunk.js": "/omconsulting/static/js/453.1f190cd3.chunk.js",
-    "static/js/467.4e78ee02.chunk.js": "/omconsulting/static/js/467.4e78ee02.chunk.js",
     "static/js/355.d8520c89.chunk.js": "/omconsulting/static/js/355.d8520c89.chunk.js",
     "static/media/team.jpg": "/omconsulting/static/media/team.25eac5cb2df1d5ac493b.jpg",
     "static/media/whatsapp1.png": "/omconsulting/static/media/whatsapp1.56d0a6477edf5fc4cb91.png",
@@ -63,10 +62,10 @@
     "static/media/fa-v4compatibility.woff2": "/omconsulting/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/omconsulting/index.html",
     "main.09f65998.css.map": "/omconsulting/static/css/main.09f65998.css.map",
-    "main.3f6567b7.js.map": "/omconsulting/static/js/main.3f6567b7.js.map",
+    "main.729a739b.js.map": "/omconsulting/static/js/main.729a739b.js.map",
     "553.be73eecc.chunk.js.map": "/omconsulting/static/js/553.be73eecc.chunk.js.map",
-    "159.229cdab1.chunk.js.map": "/omconsulting/static/js/159.229cdab1.chunk.js.map",
-    "782.f32bf0c0.chunk.js.map": "/omconsulting/static/js/782.f32bf0c0.chunk.js.map",
+    "159.98b84475.chunk.js.map": "/omconsulting/static/js/159.98b84475.chunk.js.map",
+    "782.4231d5be.chunk.js.map": "/omconsulting/static/js/782.4231d5be.chunk.js.map",
     "457.6fdc29c0.chunk.js.map": "/omconsulting/static/js/457.6fdc29c0.chunk.js.map",
     "405.997a7d8f.chunk.js.map": "/omconsulting/static/js/405.997a7d8f.chunk.js.map",
     "128.e977bb11.chunk.js.map": "/omconsulting/static/js/128.e977bb11.chunk.js.map",
@@ -82,13 +81,12 @@
     "272.1cd48543.chunk.js.map": "/omconsulting/static/js/272.1cd48543.chunk.js.map",
     "888.fd898588.chunk.js.map": "/omconsulting/static/js/888.fd898588.chunk.js.map",
     "191.2ce604f2.chunk.js.map": "/omconsulting/static/js/191.2ce604f2.chunk.js.map",
-    "615.5db3727b.chunk.js.map": "/omconsulting/static/js/615.5db3727b.chunk.js.map",
+    "615.9f124fd5.chunk.js.map": "/omconsulting/static/js/615.9f124fd5.chunk.js.map",
     "453.1f190cd3.chunk.js.map": "/omconsulting/static/js/453.1f190cd3.chunk.js.map",
-    "467.4e78ee02.chunk.js.map": "/omconsulting/static/js/467.4e78ee02.chunk.js.map",
     "355.d8520c89.chunk.js.map": "/omconsulting/static/js/355.d8520c89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09f65998.css",
-    "static/js/main.3f6567b7.js"
+    "static/js/main.729a739b.js"
   ]
 }
