@@ -14,7 +14,7 @@ const WhatsappMarketing = () => {
           <div className="inline-flex items-center bg-gray-200 px-4 py-2 rounded-full mb-4">
             <FaWhatsapp className="text-xl mr-2 text-green-500" />
             <span className="text-sm font-medium">
-              OM Consulting - Trusted WhatsApp Marketing Partner
+              OM Tech Solutions - Trusted WhatsApp Marketing Partner
             </span>
           </div>
 
@@ -23,7 +23,7 @@ const WhatsappMarketing = () => {
             <span className="text-green-500">Our WhatsApp Marketing Solutions</span>
           </h2>
           <p className="text-gray-700">
-            OM Consultancy helps businesses maximize customer outreach with
+            OM Tech Solutions helps businesses maximize customer outreach with
             automated chat solutions, targeted campaigns, and real-time engagement.
           </p>
 
@@ -70,10 +70,10 @@ const WhatsappMarketing = () => {
               <span>Get Started on WhatsApp</span>
             </a>
             <a
-              href="tel:+919999999999"
+              href="tel:0120-2977830"
               className="border border-gray-400 hover:border-gray-600 py-3 px-6 rounded-lg text-center transition-colors text-gray-700 shadow-sm"
             >
-              📞 Call Us: +91 9999 999 999
+              📞 Call Us: 0120-2977830
             </a>
           </div>
         </div>

@@ -79,7 +79,7 @@ const Navbar = () => {
               width="32"
               height="32"
             />
-            <span className="ml-2 text-xl font-bold">OM Consulting</span>
+            <span className="ml-2 text-xl font-bold">OM Tech Solutions</span>
           </Link>
 
           {/* Desktop Navigation */}

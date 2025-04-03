@@ -1,6 +1,7 @@
 import { FaFacebook, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import companyLogo from "../assets/comlogo.png"; // Update the path to your logo
+import { FaMapMarkerAlt, FaPhoneAlt, FaMap } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,10 +13,10 @@ const Footer = () => {
           <div className="w-full lg:w-1/5">
             <div className="flex items-center space-x-3 mb-4">
               <img src={companyLogo} alt="OM Consultancy Logo" className="h-8 w-8" />
-              <h3 className="text-sm font-semibold">OM Consulting</h3>
+              <h3 className="text-sm font-semibold">OM Tech Solutions</h3>
             </div>
             <p className="text-gray-400 text-xs">
-              OM Consulting is a digital marketing company offering a range of services to help businesses grow online.
+              OM Tech Solutions is a digital marketing company offering a range of services to help businesses grow online.
             </p>
             <div className="flex space-x-4 mt-3">
               <a href="https://www.facebook.com/omconsultingpvtltd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500">
@@ -65,17 +66,33 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Our Office */}
-          <div className="w-full lg:w-1/5">
-            <h3 className="text-sm font-semibold mb-3 uppercase tracking-wider text-gray-300">Our Office</h3>
-            <p className="text-gray-400 text-xs">Add- 216-221, 2nd Floor, Om Tower, Commercial Belt, Alpha-1, Greater Noida, U.P. India</p>
-            <p className="text-gray-400 text-xs">  0120-2977830</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=216-221, 2nd Floor, Om Tower, Commercial Belt, Alpha-1, Greater Noida, U.P., India" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:underline text-xs">
-  View on Google Maps
-</a>
+          
 
-          </div>
-        </div>
+{/* Our Office */}
+<div className="w-full lg:w-1/5">
+  <h3 className="text-sm font-semibold mb-3 uppercase tracking-wider text-gray-300">Our Office</h3>
+  
+  <div className="flex items-center text-gray-400 text-xs mb-2">
+    <FaMapMarkerAlt className="mr-5 text-yellow-500" />
+    <p>216-221, 2nd Floor, Om Tower, Commercial Belt, Alpha-1, Greater Noida, U.P. India</p>
+  </div>
+
+  <div className="flex items-center text-gray-400 text-xs mb-2">
+    <FaPhoneAlt className="mr-5 text-yellow-500" />
+    <p>0120-2977830</p>
+  </div>
+
+  <a 
+    href="https://www.google.com/maps/search/?api=1&query=216-221, 2nd Floor, Om Tower, Commercial Belt, Alpha-1, Greater Noida, U.P., India"
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex items-center text-yellow-500 hover:underline text-xs"
+  >
+    <FaMap className="mr-5" />
+    View on Google Maps
+  </a>
+</div>
+</div>
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 mt-6 pt-3 text-center relative rounded-full">
@@ -86,7 +103,7 @@ const Footer = () => {
             ↑
           </button>
           <p className="text-gray-400 text-xs">
-            &copy; {new Date().getFullYear()} OM Consulting. All Rights Reserved.  
+            &copy; {new Date().getFullYear()} OM Tech Solutions. All Rights Reserved.  
             <Link to="/privacy-policy" className="ml-2 hover:text-yellow-500 text-xs">Privacy Policy</Link> |  
             <Link to="/terms-of-service" className="hover:text-yellow-500 text-xs">Terms of Service</Link>
           </p>
