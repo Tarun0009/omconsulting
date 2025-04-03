@@ -25,11 +25,7 @@ const services = [
     description: "Creating powerful and scalable online stores with secure payment gateways and optimized user experiences.",
     link: "/e-commerce-solutions",
   },
-  {
-    title: "Custom Software Development",
-    description: "Tailor-made software solutions for enterprises, including CRM, ERP, and cloud-based applications.",
-    link: "/custom-software",
-  },
+
 ];
 
 const Development = () => {
@@ -51,42 +47,47 @@ const Development = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="mb-12 md:mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-6 md:mb-8">
-            Our Services
-          </h2>
-          <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+       {/* Services Grid */}
+<div className="mb-12 md:mb-16 text-center">
+  <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8">
+    Our Services
+  </h2>
+
+  {/* Centering the grid */}
+  <div className="flex justify-center">
+    <motion.div 
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      {services.map((service, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ scale: 1.03 }}
+          className="p-4 md:p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center"
+        >
+          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+            {service.title}
+          </h3>
+          <p className="text-sm md:text-base text-gray-600 mb-3">
+            {service.description}
+          </p>
+          <Link 
+            to={service.link} 
+            className="text-blue-600 text-sm md:text-base font-medium inline-flex items-center hover:text-blue-800"
           >
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.03 }}
-                className="p-4 md:p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300"
-              >
-                <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-sm md:text-base text-gray-600 mb-3">
-                  {service.description}
-                </p>
-                <Link 
-                  to={service.link} 
-                  className="text-blue-600 text-sm md:text-base font-medium inline-flex items-center hover:text-blue-800"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+            Learn More
+            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</div>
+
 
         {/* Why Choose Us & Technologies Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">

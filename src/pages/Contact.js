@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaWhatsapp, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const ContactSection = () => {
   return (
@@ -8,7 +8,7 @@ const ContactSection = () => {
       aria-labelledby="contact-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white/50 backdrop-blur-sm rounded-xl shadow-sm p-6 md:p-8 lg:p-10 border border-white/20">
+        <div className="bg-white/90 md:bg-white/50 md:backdrop-blur-sm rounded-xl shadow-sm p-6 md:p-8 lg:p-10 border border-white/20">
           <div className="text-center mb-8 md:mb-10">
             <h2
               id="contact-heading"
@@ -29,7 +29,7 @@ const ContactSection = () => {
                 <ul className="space-y-3 text-sm text-gray-600">
                   <li>
                     <strong className="block font-medium text-gray-800">Address</strong>
-                    <span>London Eye, London, UK</span>
+                    <span>Add- 216-221, 2nd Floor, Om Tower, Commercial Belt, Alpha-1, Greater Noida, U.P. India</span>
                   </li>
                   <li>
                     <strong className="block font-medium text-gray-800">Phone</strong>
@@ -38,17 +38,18 @@ const ContactSection = () => {
                       className="text-blue-600 hover:underline"
                       aria-label="Call Us"
                     >
-                      +123-456-7890
+                       0120-2977830
                     </a>
                   </li>
                   <li>
                     <strong className="block font-medium text-gray-800">Email</strong>
                     <a
-                      href="mailto:youremail@example.com"
+                      href="mailto:omconsultingltd@gmail.com"
+
                       className="text-blue-600 hover:underline"
                       aria-label="Email Us"
                     >
-                      youremail@example.com
+                      omconsultingltd@gmail.com
                     </a>
                   </li>
                 </ul>
@@ -57,10 +58,11 @@ const ContactSection = () => {
               <div className="pt-6 border-t border-gray-200">
                 <h3 className="text-base font-medium text-gray-900 mb-4">Follow Us</h3>
                 <div className="flex justify-center md:justify-start space-x-4">
-                  {[{ Icon: FaFacebookF, url: 'https://facebook.com', color: 'hover:text-blue-600', label: 'Facebook' },
-                    { Icon: FaTwitter, url: 'https://twitter.com', color: 'hover:text-blue-400', label: 'Twitter' },
-                    { Icon: FaLinkedinIn, url: 'https://linkedin.com', color: 'hover:text-blue-700', label: 'LinkedIn' },
-                    { Icon: FaInstagram, url: 'https://instagram.com', color: 'hover:text-pink-600', label: 'Instagram' }].map(
+                  {[{ Icon: FaFacebookF, url: 'https://www.facebook.com/omconsultingpvtltd', color: 'hover:text-blue-600', label: 'Facebook' },
+                    { Icon: FaWhatsapp, url: 'https://whatsapp.com/channel/0029Vb8neRo9cDDdycTlwN1f', color: 'hover:text-green-500', label: 'WhatsApp' },
+
+                    { Icon: FaLinkedinIn, url: 'https://www.linkedin.com/company/omconsultingpvtltd', color: 'hover:text-blue-700', label: 'LinkedIn' },
+                    { Icon: FaInstagram, url: 'https://www.instagram.com/omconsultingpvtltd/', color: 'hover:text-pink-600', label: 'Instagram' }].map(
                     ({ Icon, url, color, label }, index) => (
                       <a
                         key={index}
@@ -79,7 +81,7 @@ const ContactSection = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-sm border border-white/30 max-w-md md:max-w-none mx-auto w-full">
+            <div className="bg-white/90 md:bg-white/70 md:backdrop-blur-sm p-6 rounded-lg shadow-sm border border-white/30 max-w-md md:max-w-none mx-auto w-full">
               <form className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">

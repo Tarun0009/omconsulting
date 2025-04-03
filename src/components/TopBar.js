@@ -4,25 +4,26 @@ const TopBar = () => {
   const socialMedia = [
     {
       name: 'Facebook',
-      url: 'https://facebook.com',
+      url: 'https://www.facebook.com/omconsultingpvtltd',
       icon: 'fab fa-facebook-f',
       color: 'hover:text-[#1877f2]',
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com',
-      icon: 'fab fa-twitter',
-      color: 'hover:text-[#1da1f2]',
+      name: 'WhatsApp',
+      url: 'https://whatsapp.com/channel/0029Vb8neRo9cDDdycTlwN1f',
+      icon: 'fab fa-whatsapp',
+      color: 'hover:text-[#25D366]',
     },
+    
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/company/omconsultingpvtltd',
       icon: 'fab fa-linkedin-in',
       color: 'hover:text-[#0a66c2]',
     },
     {
       name: 'Instagram',
-      url: 'https://instagram.com',
+      url: 'https://www.instagram.com/omconsultingpvtltd/',
       icon: 'fab fa-instagram',
       color: 'hover:text-[#e4405f]',
     },
@@ -35,23 +36,23 @@ const TopBar = () => {
           {/* Contact Info */}
           <div className="flex items-center space-x-4">
             <a 
-              href="tel:+1234567890" 
+              href="tel:0120-2977830" 
               className="flex items-center hover:text-white transition-colors duration-300"
-              aria-label="Call us at +1 234 567 890"
+              aria-label="Call us at 0120-2977830"
             >
               <i className="fas fa-phone-alt mr-2 text-sm" aria-hidden="true"></i>
-              <span className="text-sm">+1 234 567 890</span>
+              <span className="text-sm"> 0120-2977830</span>
             </a>
             
             <span className="hidden md:inline-block text-gray-400">|</span>
             
             <a 
-              href="mailto:info@example.com" 
+              href="mailto:omconsultingltd@gmail.com"
               className="flex items-center hover:text-white transition-colors duration-300"
               aria-label="Email us at info@example.com"
             >
               <i className="fas fa-envelope mr-2 text-sm" aria-hidden="true"></i>
-              <span className="text-sm">info@example.com</span>
+              <span className="text-sm">omconsultingltd@gmail.com</span>
             </a>
           </div>
 

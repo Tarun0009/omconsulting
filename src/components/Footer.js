@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import companyLogo from "../assets/comlogo.png"; // Update the path to your logo
 
@@ -18,16 +18,17 @@ const Footer = () => {
               OM Consulting is a digital marketing company offering a range of services to help businesses grow online.
             </p>
             <div className="flex space-x-4 mt-3">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500">
+              <a href="https://www.facebook.com/omconsultingpvtltd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500">
                 <FaFacebook className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500">
-                <FaTwitter className="h-5 w-5" />
+              <a href="https://whatsapp.com/channel/0029Vb8neRo9cDDdycTlwN1f" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500">
+                <FaWhatsapp className="h-5 w-5" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500">
+
+              <a href="https://www.instagram.com/omconsultingpvtltd/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500">
                 <FaInstagram className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500">
+              <a href="https://www.linkedin.com/company/omconsultingpvtltd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500">
                 <FaLinkedin className="h-5 w-5" />
               </a>
             </div>
@@ -67,11 +68,12 @@ const Footer = () => {
           {/* Our Office */}
           <div className="w-full lg:w-1/5">
             <h3 className="text-sm font-semibold mb-3 uppercase tracking-wider text-gray-300">Our Office</h3>
-            <p className="text-gray-400 text-xs">1234 Street Name, City, Country</p>
-            <p className="text-gray-400 text-xs">Phone: +123 456 7890</p>
-            <a href="https://www.google.com/maps/place/1234+Street+Name" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:underline text-xs">
-              View on Google Maps
-            </a>
+            <p className="text-gray-400 text-xs">Add- 216-221, 2nd Floor, Om Tower, Commercial Belt, Alpha-1, Greater Noida, U.P. India</p>
+            <p className="text-gray-400 text-xs">  0120-2977830</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=216-221, 2nd Floor, Om Tower, Commercial Belt, Alpha-1, Greater Noida, U.P., India" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:underline text-xs">
+  View on Google Maps
+</a>
+
           </div>
         </div>
 

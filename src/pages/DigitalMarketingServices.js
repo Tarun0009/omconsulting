@@ -125,27 +125,36 @@ const DigitalMarketingServices = () => {
         </div>
 
         {/* Clients Section */}
-        <div className="text-center mb-12 md:mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Our Valued Clients</h3>
-          <p className="text-sm md:text-base text-gray-600 mb-6">
-            We take pride in working with top brands and helping them achieve digital success.
+<div className="text-center mb-12 md:mb-16">
+  <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+    Our Valued Clients
+  </h3>
+  <p className="text-sm md:text-base text-gray-600 mb-6">
+    We take pride in working with top brands and helping them achieve digital success.
+  </p>
+  
+  {/* Centering the clients list */}
+  <div className="flex justify-center">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      {clients.map((client, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-lg shadow-md p-3 md:p-4 hover:scale-105 transition-transform flex flex-col items-center"
+        >
+          <img 
+            src={`/clients/${client.image}`} 
+            alt={client.name} 
+            className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
+          />
+          <p className="text-blue-600 font-medium text-sm md:text-base mt-2">
+            {client.name}
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
-            {clients.map((client, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md p-3 md:p-4 hover:scale-105 transition-transform"
-              >
-                <img 
-                  src={`/clients/${client.image}`} 
-                  alt={client.name} 
-                  className="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full object-cover"
-                />
-                <p className="text-blue-600 font-medium text-sm md:text-base mt-2">{client.name}</p>
-              </div>
-            ))}
-          </div>
         </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
         {/* Contact Section */}
         <div className="bg-gray-800 text-white rounded-xl p-6 md:p-8 text-center mx-auto max-w-md">
