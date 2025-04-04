@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/omconsulting/static/css/main.09f65998.css",
-    "main.js": "/omconsulting/static/js/main.79edc6db.js",
+    "main.js": "/omconsulting/static/js/main.eb8dd98c.js",
     "static/js/553.f598fdd8.chunk.js": "/omconsulting/static/js/553.f598fdd8.chunk.js",
     "static/js/159.98b84475.chunk.js": "/omconsulting/static/js/159.98b84475.chunk.js",
     "static/js/782.4231d5be.chunk.js": "/omconsulting/static/js/782.4231d5be.chunk.js",
@@ -62,7 +62,7 @@
     "static/media/fa-v4compatibility.woff2": "/omconsulting/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/omconsulting/index.html",
     "main.09f65998.css.map": "/omconsulting/static/css/main.09f65998.css.map",
-    "main.79edc6db.js.map": "/omconsulting/static/js/main.79edc6db.js.map",
+    "main.eb8dd98c.js.map": "/omconsulting/static/js/main.eb8dd98c.js.map",
     "553.f598fdd8.chunk.js.map": "/omconsulting/static/js/553.f598fdd8.chunk.js.map",
     "159.98b84475.chunk.js.map": "/omconsulting/static/js/159.98b84475.chunk.js.map",
     "782.4231d5be.chunk.js.map": "/omconsulting/static/js/782.4231d5be.chunk.js.map",
@@ -87,6 +87,6 @@
   },
   "entrypoints": [
     "static/css/main.09f65998.css",
-    "static/js/main.79edc6db.js"
+    "static/js/main.eb8dd98c.js"
   ]
 }
