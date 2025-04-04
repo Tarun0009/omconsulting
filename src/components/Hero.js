@@ -17,18 +17,18 @@ import hero3 from "../assets/hero/hero3.jpg";
 import hero4 from "../assets/hero/hero4.jpg";
 
 const services = [
-  { title: "Web Development", icon: "💻", description: "Modern, high-performance websites tailored to your business needs.", link: "/web-development" },
-  { title: "App Development", icon: "📱", description: "Custom mobile applications for iOS and Android platforms.", link: "/app-development" },
-  { title: "E-Commerce Solutions", icon: "🛒", description: "Seamless online shopping experiences with powerful features.", link: "/e-commerce-solutions" },
-  { title: "SEO Optimization", icon: "🔍", description: "Boost your search rankings with expert SEO strategies.", link: "/seo-optimization" },
-  { title: "Email Marketing", icon: "📧", description: "Engaging email campaigns that convert leads into customers.", link: "/email-marketing" },
-  { title: "Social Media Marketing", icon: "📢", description: "Expand your brand presence on social media platforms.", link: "/social-media-marketing" },
-  { title: "Social Media Designing", icon: "🎨", description: "Eye-catching designs for your social media campaigns.", link: "/social-media-designing" },
-  { title: "Content Marketing", icon: "📝", description: "High-quality content that engages and retains customers.", link: "/content-marketing" },
-  { title: "Logo Designing", icon: "🏆", description: "Unique and professional logos that define your brand.", link: "/logo-designing" },
-  { title: "Paid Advertising", icon: "💰", description: "Maximize your ROI with targeted ad campaigns.", link: "/paid-advertising" },
-  { title: "WhatsApp Marketing", icon: "📲", description: "Engage customers with automated and personalized WhatsApp campaigns.",link:"/whatsapp-marketing" },
-  { title: "Banner Service", icon: "🖼️", description: "Custom banners for websites, social media, and digital ads.", link:"/banner-designing" },
+  { title: "Web Development", icon: "💻", description: "Modern, high-performance websites tailored to your business needs.", link: "#/web-development" },
+  { title: "App Development", icon: "📱", description: "Custom mobile applications for iOS and Android platforms.", link: "#/app-development" },
+  { title: "E-Commerce Solutions", icon: "🛒", description: "Seamless online shopping experiences with powerful features.", link: "#/e-commerce-solutions" },
+  { title: "SEO Optimization", icon: "🔍", description: "Boost your search rankings with expert SEO strategies.", link: "#/seo-optimization" },
+  { title: "Email Marketing", icon: "📧", description: "Engaging email campaigns that convert leads into customers.", link: "#/email-marketing" },
+  { title: "Social Media Marketing", icon: "📢", description: "Expand your brand presence on social media platforms.", link: "#/social-media-marketing" },
+  { title: "Social Media Designing", icon: "🎨", description: "Eye-catching designs for your social media campaigns.", link: "#/social-media-designing" },
+  { title: "Content Marketing", icon: "📝", description: "High-quality content that engages and retains customers.", link: "#/content-marketing" },
+  { title: "Logo Designing", icon: "🏆", description: "Unique and professional logos that define your brand.", link: "#/logo-designing" },
+  { title: "Paid Advertising", icon: "💰", description: "Maximize your ROI with targeted ad campaigns.", link: "#/paid-advertising" },
+  { title: "WhatsApp Marketing", icon: "📲", description: "Engage customers with automated and personalized WhatsApp campaigns.", link: "#/whatsapp-marketing" },
+  { title: "Banner Service", icon: "🖼️", description: "Custom banners for websites, social media, and digital ads.", link: "#/banner-designing" },
 ];
 
 
