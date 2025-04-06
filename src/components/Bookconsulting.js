@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const BookConsulting = ({ isOpen, onClose }) => {
+  const formRef = useRef();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,9 +38,10 @@ const BookConsulting = ({ isOpen, onClose }) => {
         name: "",
         email: "",
         phone: "",
-        date: "",
-        message: "",
         services: [],
+        date: "",
+        message: ""
+       
       });
       setError("");
     }
@@ -74,14 +78,21 @@ const BookConsulting = ({ isOpen, onClose }) => {
       setError(validationError);
       return;
     }
+
     setIsLoading(true);
     setError("");
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await emailjs.sendForm(
+        "service_1dz5979",      // 🔁 Replace with your EmailJS service ID
+        "template_z37jete",     // 🔁 Replace with your EmailJS template ID
+        formRef.current,
+        "-vb_3R7MG7YGlpJ9r"       // 🔁 Replace with your EmailJS public key
+      );
       alert("Your appointment request has been submitted!");
       onClose();
     } catch (error) {
+      console.error("EmailJS Error:", error);
       setError("Failed to submit. Please try again.");
     } finally {
       setIsLoading(false);
@@ -101,18 +112,18 @@ const BookConsulting = ({ isOpen, onClose }) => {
 
         {error && <p className="text-red-500 text-sm text-center mb-4">{error}</p>}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
           <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" placeholder="Full Name*" required />
           <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" placeholder="Email*" required />
           <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" placeholder="Phone Number" required />
           
-          {/* Services Selection  */}
+          {/* Services Selection */}
           <div className="relative">
             <button type="button" className="w-full p-2 border rounded bg-gray-100 text-gray-900 text-left" onClick={() => setShowServices(!showServices)}>
               {formData.services.length > 0 ? formData.services.join(", ") : "Select Services"}
             </button>
             {showServices && (
-              <div className="absolute w-full bg-white border rounded shadow-lg mt-1 max-h-48 overflow-auto">
+              <div className="absolute w-full bg-white border rounded shadow-lg mt-1 max-h-48 overflow-auto z-10">
                 {servicesList.map((service, index) => (
                   <div
                     key={index}
@@ -125,7 +136,10 @@ const BookConsulting = ({ isOpen, onClose }) => {
               </div>
             )}
           </div>
-          
+
+          {/* Hidden input for services list (for EmailJS) */}
+          <input type="hidden" name="services" value={formData.services.join(", ")} />
+
           <input type="date" name="date" value={formData.date} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" required />
           <textarea name="message" value={formData.message} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" placeholder="Additional Message" rows="3"></textarea>
 

@@ -123,12 +123,12 @@ const Hero = () => {
           className="h-full w-full"
         >
           {/* Slide 1: Digital Marketing */}
-          <SwiperSlide className="relative flex items-center bg-gradient-to-br from-blue-900 to-blue-600 py-12 lg:py-20">
-  <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12 px-6 sm:px-8 lg:px-10">
+          <SwiperSlide className="relative flex items-center bg-gradient-to-br from-blue-900 to-blue-600 py-14 md:py-20 lg:py-28">
+  <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
     
     {/* Left Text Content */}
     <motion.div
-      className="max-w-xl text-center lg:text-left space-y-5 lg:space-y-6 z-10 order-2 lg:order-1"
+      className="max-w-2xl text-center lg:text-left space-y-6 z-10"
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
@@ -137,46 +137,46 @@ const Hero = () => {
         Full-Service Digital Agency
       </span>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
         Transform Your  
-        <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mt-2 lg:mt-3">
+        <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mt-3">
           Digital Ecosystem
         </span>
       </h1>
 
-      <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-  Leverage our 360° digital marketing solutions, blending technology, 
-  data insights, and creativity—from SEO to social media strategies.  
-  Our tailored approach ensures brand visibility, customer engagement,  
-  and measurable growth. Whether it's content marketing, PPC campaigns,  
-  or conversion optimization, we craft strategies that drive real results.  
-  Stay ahead of the competition with innovative, data-driven marketing techniques.
-</p>
+      <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
+        Leverage our 360° digital marketing solutions, blending technology, 
+        data insights, and creativity—from SEO to social media strategies.  
+        Our tailored approach ensures brand visibility, customer engagement,  
+        and measurable growth. Whether it's content marketing, PPC campaigns,  
+        or conversion optimization, we craft strategies that drive real results.  
+        Stay ahead of the competition with innovative, data-driven marketing techniques.
+      </p>
 
-
-      {/* CTA Buttons */}
+      {/* CTA Button */}
       <Link to="/contact">
-  <motion.button
-    className="bg-white text-blue-900 px-6 py-3 rounded-full text-sm sm:text-base mt-5  font-medium hover:bg-gray-100 transition-all shadow-md"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    Request Strategy Session
-  </motion.button>
-</Link>
-</motion.div>.
+        <motion.button
+          className="bg-white text-blue-900 px-6 py-3 rounded-full text-sm sm:text-base mt-5 font-medium hover:bg-gray-100 transition-all shadow-md"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Request Strategy Session
+        </motion.button>
+      </Link>
+    </motion.div>
 
     {/* Hero Image */}
     <motion.img
       src={hero1}
       alt="Digital transformation"
-      className="w-full max-w-md sm:max-w-lg lg:max-w-xl h-auto object-contain rounded-xl order-1 lg:order-2 mt-8 lg:mt-0"
+      className="w-full max-w-[90%] sm:max-w-md md:max-w-lg lg:max-w-xl h-auto object-contain rounded-xl shadow-xl"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     />
   </div>
 </SwiperSlide>
+
 
 
 

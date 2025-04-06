@@ -1,6 +1,29 @@
+import React, { useRef } from 'react';
 import { FaFacebookF, FaWhatsapp, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_1dz5979', // Replace with actual Service ID
+      'template_yafma1e', // Replace with actual Template ID
+      form.current,
+      '-vb_3R7MG7YGlpJ9r' // Replace with actual Public Key
+    )
+    .then((result) => {
+      console.log('Message sent:', result.text);
+      alert("Message sent successfully!");
+      form.current.reset();
+    }, (error) => {
+      console.error('Send error:', error.text);
+      alert("Failed to send message.");
+    });
+  };
+
   return (
     <section
       id="contact"
@@ -45,7 +68,6 @@ const ContactSection = () => {
                     <strong className="block font-medium text-gray-800">Email</strong>
                     <a
                       href="mailto:omconsultingltd@gmail.com"
-
                       className="text-blue-600 hover:underline"
                       aria-label="Email Us"
                     >
@@ -60,7 +82,6 @@ const ContactSection = () => {
                 <div className="flex justify-center md:justify-start space-x-4">
                   {[{ Icon: FaFacebookF, url: 'https://www.facebook.com/omconsultingpvtltd', color: 'hover:text-blue-600', label: 'Facebook' },
                     { Icon: FaWhatsapp, url: 'https://whatsapp.com/channel/0029Vb8neRo9cDDdycTlwN1f', color: 'hover:text-green-500', label: 'WhatsApp' },
-
                     { Icon: FaLinkedinIn, url: 'https://www.linkedin.com/company/omconsultingpvtltd', color: 'hover:text-blue-700', label: 'LinkedIn' },
                     { Icon: FaInstagram, url: 'https://www.instagram.com/omconsultingpvtltd/', color: 'hover:text-pink-600', label: 'Instagram' }].map(
                     ({ Icon, url, color, label }, index) => (
@@ -82,12 +103,13 @@ const ContactSection = () => {
 
             {/* Contact Form */}
             <div className="bg-white/90 md:bg-white/70 md:backdrop-blur-sm p-6 rounded-lg shadow-sm border border-white/30 max-w-md md:max-w-none mx-auto w-full">
-              <form className="space-y-4">
+              <form ref={form} onSubmit={sendEmail} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Name
                     <input
                       type="text"
+                      name="name"
                       required
                       className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm bg-white/50"
                       placeholder="Your name"
@@ -100,6 +122,7 @@ const ContactSection = () => {
                     Email
                     <input
                       type="email"
+                      name="email"
                       required
                       className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm bg-white/50"
                       placeholder="your@email.com"
@@ -111,6 +134,7 @@ const ContactSection = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Message
                     <textarea
+                      name="message"
                       rows="3"
                       required
                       className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm bg-white/50"
