@@ -2,6 +2,23 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
+import acgil from '../assets/clients/akshi.png';
+import akshi from '../assets/clients/acgil.jpg';
+import apna from '../assets/clients/apna.jpg';
+import ctdesign from '../assets/clients/ctdesign.png';
+import design from '../assets/clients/design.png';
+import energy from '../assets/clients/energy.JPG';
+import garg from '../assets/clients/garg.jpg';
+import gs from '../assets/clients/gs.png';
+import jaipuria from '../assets/clients/jaipuria.jpeg';
+import patanjali from '../assets/clients/patanjali.jpeg';
+import pharma from '../assets/clients/pharma.jpg';
+import rasoi from '../assets/clients/rasoi.png';
+import rojgar from '../assets/clients/rojgar.jpg';
+import ssf from '../assets/clients/SSF.jpg';
+import uronova from '../assets/clients/Uronova.png';
+//import { Link } from "react-router-dom";
+
 const services = [
   { path: "/seo", title: "SEO Services", description: "Boost your rankings with expert SEO solutions.", buttonText: "Click Me" },
   { path: "/social-media-marketing", title: "Social Media Marketing", description: "Engage and grow your audience with social media strategies.", buttonText: "Click Me" },
@@ -12,10 +29,6 @@ const services = [
   { path: "/sms-marketing", title: "SMS Marketing", description: "Drive instant results with SMS marketing campaigns.", buttonText: "Click Me" },
 ];
 
-const clients = [
-  { name: "Client A", image: "client-a.jpg" },
-  { name: "Client B", image: "client-b.jpg" },
-];
 
 const DigitalMarketingServices = () => {
   const controls = useAnimation();
@@ -134,25 +147,32 @@ const DigitalMarketingServices = () => {
   </p>
   
   {/* Centering the clients list */}
-  <div className="flex justify-center">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-      {clients.map((client, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-lg shadow-md p-3 md:p-4 hover:scale-105 transition-transform flex flex-col items-center"
-        >
-          <img 
-            src={`/clients/${client.image}`} 
-            alt={client.name} 
-            className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
-          />
-          <p className="text-blue-600 font-medium text-sm md:text-base mt-2">
-            {client.name}
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
+  <motion.div
+      className="flex gap-6 px-4 py-4 w-max"
+      animate={{ x: ["0%", "-100%"] }}
+      transition={{
+        duration: 20,
+        ease: "linear",
+        repeat: Infinity,
+      }}
+    >
+      {[patanjali, acgil, akshi, apna, ctdesign, design, energy, garg, gs, jaipuria, patanjali, pharma, rasoi, rojgar, ssf, uronova].map(
+        (clientImage, index) => (
+          <motion.div
+            key={index}
+            className="w-28 h-28 flex-shrink-0 bg-white shadow-md rounded-lg overflow-hidden"
+            whileHover={{ scale: 1.05 }}
+          >
+            <img
+              src={clientImage}
+              alt={`Client ${index + 1}`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </motion.div>
+        )
+      )}
+    </motion.div>
 </div>
 
 

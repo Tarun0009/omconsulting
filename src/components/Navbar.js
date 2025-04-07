@@ -198,7 +198,7 @@ const Navbar = () => {
                   setIsModalOpen(true);
                   handleMobileLinkClick();
                 }}
-                className="w-full mt-4 bg-yellow-500/20 text-yellow-500 py-2 rounded hover:bg-yellow-500/30"
+                className="w-full mt-4 bg-yellow-500/20 text-yellow-500 py-2 font-bold rounded hover:bg-yellow-500/30"
               >
                 Book Consultancy
               </button>

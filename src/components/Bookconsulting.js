@@ -3,15 +3,18 @@ import emailjs from "@emailjs/browser";
 
 const BookConsulting = ({ isOpen, onClose }) => {
   const formRef = useRef();
+  const servicesRef = useRef(); // Reference for detecting outside clicks
 
   const [formData, setFormData] = useState({
     name: "",
+    company: "",
     email: "",
     phone: "",
     date: "",
     message: "",
     services: [],
   });
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [showServices, setShowServices] = useState(false);
@@ -36,16 +39,26 @@ const BookConsulting = ({ isOpen, onClose }) => {
     if (!isOpen) {
       setFormData({
         name: "",
+        company: "",
         email: "",
         phone: "",
         services: [],
         date: "",
-        message: ""
-       
+        message: "",
       });
       setError("");
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+        setShowServices(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -84,10 +97,10 @@ const BookConsulting = ({ isOpen, onClose }) => {
 
     try {
       await emailjs.sendForm(
-        "service_1dz5979",      // 🔁 Replace with your EmailJS service ID
-        "template_z37jete",     // 🔁 Replace with your EmailJS template ID
+        "service_1dz5979",      // Replace with your EmailJS service ID
+        "template_z37jete",     // Replace with your EmailJS template ID
         formRef.current,
-        "-vb_3R7MG7YGlpJ9r"       // 🔁 Replace with your EmailJS public key
+        "-vb_3R7MG7YGlpJ9r"     // Replace with your EmailJS public key
       );
       alert("Your appointment request has been submitted!");
       onClose();
@@ -102,9 +115,9 @@ const BookConsulting = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-gray-900/70 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative">
-        <button onClick={onClose} className="absolute top-2 right-2 text-gray-600 hover:text-gray-900">
+    <div className="fixed inset-0 bg-gray-900/70 flex items-center justify-center p-4 z-50">
+      <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-5 relative overflow-y-auto max-h-[90vh] sm:max-h-[80vh]">
+        <button onClick={onClose} className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-lg">
           ✖
         </button>
 
@@ -112,22 +125,64 @@ const BookConsulting = ({ isOpen, onClose }) => {
 
         {error && <p className="text-red-500 text-sm text-center mb-4">{error}</p>}
 
-        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-          <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" placeholder="Full Name*" required />
-          <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" placeholder="Email*" required />
-          <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" placeholder="Phone Number" required />
-          
-          {/* Services Selection */}
-          <div className="relative">
-            <button type="button" className="w-full p-2 border rounded bg-gray-100 text-gray-900 text-left" onClick={() => setShowServices(!showServices)}>
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-3">
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-gray-900"
+            placeholder="Full Name*"
+            required
+          />
+
+          <input
+            type="text"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-gray-900"
+            placeholder="Company Name"
+          />
+
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-gray-900"
+            placeholder="Email*"
+            required
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-gray-900"
+            placeholder="Phone Number*"
+            required
+          />
+
+          {/* Services Dropdown */}
+          <div className="relative" ref={servicesRef}>
+            <button
+              type="button"
+              className="w-full p-2 border rounded bg-gray-100 text-gray-900 text-left"
+              onClick={() => setShowServices(!showServices)}
+            >
               {formData.services.length > 0 ? formData.services.join(", ") : "Select Services"}
             </button>
+
             {showServices && (
-              <div className="absolute w-full bg-white border rounded shadow-lg mt-1 max-h-48 overflow-auto z-10">
+              <div className="absolute w-full bg-white border rounded shadow-lg mt-1 max-h-48 overflow-auto z-20">
                 {servicesList.map((service, index) => (
                   <div
                     key={index}
-                    className={`p-2 cursor-pointer hover:bg-gray-200 text-gray-900 ${formData.services.includes(service) ? "bg-blue-100" : ""}`}
+                    className={`p-2 cursor-pointer hover:bg-gray-200 text-gray-900 ${
+                      formData.services.includes(service) ? "bg-blue-100" : ""
+                    }`}
                     onClick={() => handleServiceChange(service)}
                   >
                     {service}
@@ -137,13 +192,34 @@ const BookConsulting = ({ isOpen, onClose }) => {
             )}
           </div>
 
-          {/* Hidden input for services list (for EmailJS) */}
+          {/* Hidden input for EmailJS */}
           <input type="hidden" name="services" value={formData.services.join(", ")} />
 
-          <input type="date" name="date" value={formData.date} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" required />
-          <textarea name="message" value={formData.message} onChange={handleChange} className="w-full p-2 border rounded text-gray-900" placeholder="Additional Message" rows="3"></textarea>
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-gray-900"
+            required
+          />
 
-          <button type="submit" disabled={isLoading} className={`w-full p-2 rounded text-black ${isLoading ? "bg-yellow-800" : "bg-yellow-600 hover:bg-blue-700"}`}>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-gray-900"
+            placeholder="Additional Message"
+            rows="3"
+          ></textarea>
+
+          <button
+            type="submit"
+            disabled={isLoading}
+            className={`w-full p-2 rounded text-black ${
+              isLoading ? "bg-yellow-800" : "bg-yellow-600 hover:bg-yellow-700"
+            }`}
+          >
             {isLoading ? "Submitting..." : "Schedule Consultation"}
           </button>
         </form>

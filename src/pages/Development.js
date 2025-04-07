@@ -1,13 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import acgil from '../assets/clients/akshi.png';
+import akshi from '../assets/clients/acgil.jpg';
+import apna from '../assets/clients/apna.jpg';
+import ctdesign from '../assets/clients/ctdesign.png';
+import design from '../assets/clients/design.png';
+import energy from '../assets/clients/energy.JPG';
+import garg from '../assets/clients/garg.jpg';
+import gs from '../assets/clients/gs.png';
+import jaipuria from '../assets/clients/jaipuria.jpeg';
+import patanjali from '../assets/clients/patanjali.jpeg';
+import pharma from '../assets/clients/pharma.jpg';
+import rasoi from '../assets/clients/rasoi.png';
+import rojgar from '../assets/clients/rojgar.jpg';
+import ssf from '../assets/clients/SSF.jpg';
+import uronova from '../assets/clients/Uronova.png';
 
-const clients = [
-  { id: 1, name: "Client 1", logo: "/client1.png" },
-  { id: 2, name: "Client 2", logo: "/client2.png" },
-  { id: 3, name: "Client 3", logo: "/client3.png" },
-  { id: 4, name: "Client 4", logo: "/client4.png" },
-];
 
 const services = [
   {
@@ -42,9 +51,12 @@ const Development = () => {
             Elevate Your Business with Our Advanced Development Services
           </motion.h1>
           <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
-            At <strong>OM Consulting</strong>, we specialize in building customized digital solutions
-            that help businesses scale, innovate, and achieve digital transformation.
-          </p>
+  At <strong>OM Tech Solutions</strong>, we specialize in building customized digital solutions
+  that help businesses scale, innovate, and achieve digital transformation. Our expert team leverages
+  data-driven strategies, performance marketing, and cutting-edge web and mobile development to
+  enhance brand visibility and drive measurable results. From SEO optimization and content marketing
+  to social media growth and lead generation, we empower brands to thrive in today’s digital-first world.
+</p>
         </div>
 
        {/* Services Grid */}
@@ -180,17 +192,32 @@ const Development = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-6">
             Trusted By Leading Brands
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-8">
-            {clients.map((client) => (
-              <div key={client.id} className="p-4 bg-white rounded-lg shadow-md flex items-center justify-center">
-                <img
-                  src={client.logo}
-                  alt={`${client.name} logo`}
-                  className="h-8 md:h-12 w-auto object-contain opacity-75 hover:opacity-100 transition-opacity"
-                />
-              </div>
-            ))}
-          </div>
+          <motion.div
+              className="flex gap-6 px-4 py-4 w-max"
+              animate={{ x: ["0%", "-100%"] }}
+              transition={{
+                duration: 20,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {[patanjali, acgil, akshi, apna, ctdesign, design, energy, garg, gs, jaipuria, patanjali, pharma, rasoi, rojgar, ssf, uronova].map(
+                (clientImage, index) => (
+                  <motion.div
+                    key={index}
+                    className="w-28 h-28 flex-shrink-0 bg-white shadow-md rounded-lg overflow-hidden"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <img
+                      src={clientImage}
+                      alt={`Client ${index + 1}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </motion.div>
+                )
+              )}
+            </motion.div>
         </div>
 
         {/* CTA Section */}

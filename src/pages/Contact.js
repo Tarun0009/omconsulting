@@ -132,7 +132,7 @@ const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
+                    Please Mention Your Requirements
                     <textarea
                       name="message"
                       rows="3"

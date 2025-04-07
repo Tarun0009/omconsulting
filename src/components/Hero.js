@@ -6,6 +6,23 @@ import { useState } from "react";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import acgil from '../assets/clients/akshi.png';
+import akshi from '../assets/clients/acgil.jpg';
+import apna from '../assets/clients/apna.jpg';
+import ctdesign from '../assets/clients/ctdesign.png';
+import design from '../assets/clients/design.png';
+import energy from '../assets/clients/energy.JPG';
+import garg from '../assets/clients/garg.jpg';
+import gs from '../assets/clients/gs.png';
+import jaipuria from '../assets/clients/jaipuria.jpeg';
+import patanjali from '../assets/clients/patanjali.jpeg';
+import pharma from '../assets/clients/pharma.jpg';
+import rasoi from '../assets/clients/rasoi.png';
+import rojgar from '../assets/clients/rojgar.jpg';
+import ssf from '../assets/clients/SSF.jpg';
+import uronova from '../assets/clients/Uronova.png';
+
+
 //import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import 'swiper/css';
@@ -80,10 +97,23 @@ const faqs = [
 
 
 const clients = [
-  { name: 'TechCorp', logo: '🚀', testimonial: 'Increased organic traffic by 300% in 6 months' },
-  { name: 'HealthPlus', logo: '🏥', testimonial: 'Generated $1.2M in revenue through PPC' },
-  { name: 'EduFuture', logo: '🎓', testimonial: 'Tripled social media engagement in 3 months' },
-];
+    { name: 'TechCorp', img: acgil, testimonial: '“Organic traffic surged by 300% in just 6 months. Their SEO game is unmatched.”' },
+    { name: 'HealthPlus', img: akshi, testimonial: '“We saw $1.2M in revenue with their PPC strategy. Results-driven and sharp!”' },
+    { name: 'EduFuture', img: apna, testimonial: '“Social engagement tripled in 3 months. Their creative approach truly works.”' },
+    { name: 'GreenMart', img: ctdesign, testimonial: '“180% boost in online sales thanks to their SEO campaigns. Simply brilliant.”' },
+    { name: 'FinSecure', img: design, testimonial: '“UX improvements reduced bounce rate by 45%. Users love the new flow.”' },
+    { name: 'TravelNest', img: energy, testimonial: '“Got 4x ROI on ads in under 2 months. Their targeting is laser-focused.”' },
+    { name: 'FashionBloom', img: garg, testimonial: '“Gained 25K followers organically. Their Instagram strategies are gold.”' },
+    { name: 'AutoPro', img: gs, testimonial: '“Generated 50K+ leads through Google Ads. These guys know performance.”' },
+    { name: 'FoodiesHub', img: jaipuria, testimonial: '“Customer retention doubled with their email flow. Smart and effective.”' },
+    { name: 'BuildRight', img: patanjali, testimonial: '“Our cost-per-lead was cut in half. Their targeting was spot on.”' },
+    { name: 'WellNest', img: pharma, testimonial: '“Ranked in top 3 Google results for 15+ keywords. Amazing SEO team!”' },
+    { name: 'NextGen Solutions', img: rasoi, testimonial: '“Lead gen costs down by 35%. Their strategy really delivers.”' },
+    { name: 'MarketGuru', img: rojgar, testimonial: '“Hit 500K monthly visitors in 4 months. Insane growth!”' },
+    { name: 'HomeVista', img: ssf, testimonial: '“E-commerce conversions doubled. Their CRO magic works wonders.”' },
+    { name: 'MediTech', img: uronova, testimonial: '“UI/UX overhaul reduced bounce rates by 45%. Clean and modern.”' },
+  ];
+  
 
 const Hero = () => {
   const scrollRef = useRef(null);
@@ -123,12 +153,12 @@ const Hero = () => {
           className="h-full w-full"
         >
           {/* Slide 1: Digital Marketing */}
-          <SwiperSlide className="relative flex items-center bg-gradient-to-br from-blue-900 to-blue-600 py-14 md:py-20 lg:py-28">
+          <SwiperSlide className="relative flex items-center bg-gradient-to-br from-blue-900 to-blue-600 py-6 md:py-6 lg:py-6">
   <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
     
     {/* Left Text Content */}
     <motion.div
-      className="max-w-2xl text-center lg:text-left space-y-6 z-10"
+      className="max-w-2xl text-center lg:text-left space-y-4 z-10"
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
@@ -181,7 +211,7 @@ const Hero = () => {
 
 
 {/* Slide 2: SEO & Content Experts */}
-<SwiperSlide className="relative flex items-center bg-gradient-to-br from-gray-900 to-blue-800 py-12 lg:py-20">
+<SwiperSlide className="relative flex items-center bg-gradient-to-br from-gray-900 to-blue-800 py-6 lg:py-6">
   <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12 px-6 sm:px-8 lg:px-10">
     
     {/* Left Content Section */}
@@ -240,7 +270,7 @@ const Hero = () => {
 
 
 {/* Slide 3: Social Media Masters */}
-<SwiperSlide className="relative flex items-center bg-gradient-to-br from-purple-900 to-pink-700 py-12 lg:py-20">
+<SwiperSlide className="relative flex items-center bg-gradient-to-br from-purple-900 to-pink-700 py-6 lg:py-6">
   <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12 px-6 sm:px-8 lg:px-10">
     
     {/* Left Content Section */}
@@ -302,7 +332,7 @@ const Hero = () => {
 </SwiperSlide>
 
 {/* Slide 4: Web & App Development */}
-<SwiperSlide className="relative flex items-center bg-gradient-to-br from-indigo-900 to-yellow-600 py-14 lg:py-20">
+<SwiperSlide className="relative flex items-center bg-gradient-to-br from-indigo-900 to-yellow-600 py-6 lg:py-6">
   <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12 px-6 sm:px-8 lg:px-10">
     
     {/* Left Content Section */}
@@ -369,12 +399,12 @@ const Hero = () => {
 <div className="swiper-button-prev !text-white !w-12 !h-12 sm:!w-14 sm:!h-14 lg:!w-16 lg:!h-16 !rounded-full !bg-white/20 !backdrop-blur-sm hover:!bg-white/30 transition-colors after:!text-xl lg:after:!text-2xl shadow-xl"></div>
 
 {/* Pagination */}
-<div className="swiper-pagination !absolute !bottom-8 sm:!bottom-12 lg:!bottom-16 !left-0 !right-0 !z-10"></div>
+<div className="swiper-pagination !absolute !bottom-8 sm:!bottom-8 lg:!bottom-8 !left-0 !right-0 !z-8"></div>
 </Swiper>
       </div>
 
     {/* Why Choose Us */}
-    <div className="mt-10 bg-blue-50 p-5 rounded-xl shadow-lg">
+    <div className="mt-3 bg-blue-50 p-4 rounded-xl shadow-lg">
       <h2 className="text-3xl font-bold text-gray-900 text-center">
         Why Choose <span className="text-blue-600">OM Tech Solutions?</span>
       </h2>
@@ -471,31 +501,42 @@ const Hero = () => {
     </div>
     
     {/* Client Grid */}
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-      {clients.map((client, index) => (
-        <motion.div
-          key={client.name}
-          className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center text-center"
-          initial={{ scale: 0.95, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ delay: index * 0.1 }}
-        >
-          {/* Client Image */}
-          <img 
-            src={client.photo} 
-            alt={client.name} 
-            className="w-24 h-24 rounded-full object-cover mb-4"
-          />
-          
-          {/* Client Name & Testimonial */}
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">
-            {client.name}
-          </h3>
-          <p className="text-gray-600">{client.testimonial}</p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
+    <div className="overflow-hidden">
+  <motion.div
+    className="flex gap-8"
+    animate={{ x: ["0%", "-100%"] }}
+    transition={{
+      duration: 10,
+      ease: "linear",
+      repeat: Infinity,
+    }}
+  >
+    {clients.map((client, index) => (
+      <motion.div
+        key={index}
+        className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center text-center min-w-[300px]"
+        whileHover={{ scale: 1.05 }}
+      >
+        {/* Client Image */}
+        <img
+          src={client.img}
+          alt={client.name}
+          className="w-24 h-24 rounded-full object-cover mb-4"
+        />
+
+        {/* Client Name */}
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+          {client.name}
+        </h3>
+
+        {/* Client Testimonial */}
+        <p className="text-gray-600">{client.testimonial}</p>
+      </motion.div>
+    ))}
+  </motion.div>
+</div>
+
+      </div>
 </motion.section>
 
 
