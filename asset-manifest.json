@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/omconsulting/static/css/main.09f65998.css",
-    "main.js": "/omconsulting/static/js/main.01b2a471.js",
+    "main.js": "/omconsulting/static/js/main.0e8bcf89.js",
     "static/js/463.a9304911.chunk.js": "/omconsulting/static/js/463.a9304911.chunk.js",
     "static/js/159.2477746a.chunk.js": "/omconsulting/static/js/159.2477746a.chunk.js",
     "static/js/782.299db8a6.chunk.js": "/omconsulting/static/js/782.299db8a6.chunk.js",
@@ -20,7 +20,7 @@
     "static/js/272.1cd48543.chunk.js": "/omconsulting/static/js/272.1cd48543.chunk.js",
     "static/js/888.fd898588.chunk.js": "/omconsulting/static/js/888.fd898588.chunk.js",
     "static/js/191.2ce604f2.chunk.js": "/omconsulting/static/js/191.2ce604f2.chunk.js",
-    "static/js/615.03b332db.chunk.js": "/omconsulting/static/js/615.03b332db.chunk.js",
+    "static/js/615.31479b29.chunk.js": "/omconsulting/static/js/615.31479b29.chunk.js",
     "static/js/453.1f190cd3.chunk.js": "/omconsulting/static/js/453.1f190cd3.chunk.js",
     "static/js/355.d8520c89.chunk.js": "/omconsulting/static/js/355.d8520c89.chunk.js",
     "static/media/akshi.png": "/omconsulting/static/media/akshi.6a71be96deb762179d86.png",
@@ -75,7 +75,7 @@
     "static/media/fa-v4compatibility.woff2": "/omconsulting/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/omconsulting/index.html",
     "main.09f65998.css.map": "/omconsulting/static/css/main.09f65998.css.map",
-    "main.01b2a471.js.map": "/omconsulting/static/js/main.01b2a471.js.map",
+    "main.0e8bcf89.js.map": "/omconsulting/static/js/main.0e8bcf89.js.map",
     "463.a9304911.chunk.js.map": "/omconsulting/static/js/463.a9304911.chunk.js.map",
     "159.2477746a.chunk.js.map": "/omconsulting/static/js/159.2477746a.chunk.js.map",
     "782.299db8a6.chunk.js.map": "/omconsulting/static/js/782.299db8a6.chunk.js.map",
@@ -94,12 +94,12 @@
     "272.1cd48543.chunk.js.map": "/omconsulting/static/js/272.1cd48543.chunk.js.map",
     "888.fd898588.chunk.js.map": "/omconsulting/static/js/888.fd898588.chunk.js.map",
     "191.2ce604f2.chunk.js.map": "/omconsulting/static/js/191.2ce604f2.chunk.js.map",
-    "615.03b332db.chunk.js.map": "/omconsulting/static/js/615.03b332db.chunk.js.map",
+    "615.31479b29.chunk.js.map": "/omconsulting/static/js/615.31479b29.chunk.js.map",
     "453.1f190cd3.chunk.js.map": "/omconsulting/static/js/453.1f190cd3.chunk.js.map",
     "355.d8520c89.chunk.js.map": "/omconsulting/static/js/355.d8520c89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09f65998.css",
-    "static/js/main.01b2a471.js"
+    "static/js/main.0e8bcf89.js"
   ]
 }
