@@ -1,8 +1,11 @@
 import { FaPenAlt, FaSearch, FaVideo } from "react-icons/fa";
 import content1 from "../assets/content/content1.jpg";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
 
+=======
+>>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
 
 const ContentMarketing = () => {
   return (
@@ -68,6 +71,7 @@ const ContentMarketing = () => {
 
         {/* CTA Section */}
         <div className="mt-12 text-center">
+<<<<<<< HEAD
           <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-2 md:px-4 md:py-2 text-sm rounded-md font-medium 
@@ -76,6 +80,14 @@ const ContentMarketing = () => {
               >
                 Get Started
               </Link>
+=======
+          <a
+            href="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg font-medium transition-all"
+          >
+            Get a Custom Content Strategy
+          </a>
+>>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
         </div>
       </div>
     </section>

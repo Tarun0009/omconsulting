@@ -30,9 +30,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import hero1 from "../assets/hero/hero1.jpg";
+<<<<<<< HEAD
 import hero2 from "../assets/hero/hero2.png";
 import hero3 from "../assets/hero/hero3.png";
 import hero4 from "../assets/hero/hero4.png";
+=======
+import hero2 from "../assets/hero/hero2.jpg";
+import hero3 from "../assets/hero/hero3.jpg";
+import hero4 from "../assets/hero/hero4.jpg";
+>>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
 
 const services = [
   { title: "Web Development", icon: "💻", description: "Modern, high-performance websites tailored to your business needs.", link: "#/web-development" },
@@ -279,7 +285,11 @@ const Hero = () => {
 
     {/* Hero Image */}
     <motion.img
+<<<<<<< HEAD
       src={hero3}
+=======
+      src={hero2}
+>>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
       alt="SEO experts"
       className="w-full max-w-md sm:max-w-lg lg:max-w-xl h-auto object-contain rounded-xl order-1 lg:order-2 mt-8 lg:mt-0"
       initial={{ opacity: 0, y: 30 }}
@@ -342,7 +352,11 @@ const Hero = () => {
 </motion.div>
     {/* Hero Image */}
     <motion.img
+<<<<<<< HEAD
       src={hero4}
+=======
+      src={hero3}
+>>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
       alt="Social media"
       className="w-full max-w-md sm:max-w-lg lg:max-w-xl h-auto object-contain rounded-xl order-1 lg:order-2 mt-8 lg:mt-0"
       initial={{ opacity: 0, y: 30 }}
@@ -405,7 +419,11 @@ const Hero = () => {
 
     {/* Hero Image */}
     <motion.img
+<<<<<<< HEAD
       src={hero2}
+=======
+      src={hero4}
+>>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
       alt="Web development"
       className="w-full max-w-md sm:max-w-lg lg:max-w-xl h-auto object-contain rounded-xl order-1 lg:order-2 mt-8 lg:mt-0"
       initial={{ opacity: 0, y: 30 }}

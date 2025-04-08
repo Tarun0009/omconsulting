@@ -1,6 +1,9 @@
 import React from "react";
 import { FaShoppingCart, FaMobileAlt, FaShieldAlt, FaBoxOpen } from "react-icons/fa";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+>>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
 
 const ECommerceSolutions = () => {
   return (
@@ -34,6 +37,7 @@ const ECommerceSolutions = () => {
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
         <div className="mt-12 text-center">
                            <Link
                                  to="/contact"
@@ -44,6 +48,17 @@ const ECommerceSolutions = () => {
                                  Get Started
                                </Link>
                          </div>
+=======
+        <div className="text-center mt-12">
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300"
+            aria-label="Get a Free Consultation"
+          >
+            Get a Free Consultation
+          </a>
+        </div>
+>>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
       </div>
     </section>
   );
