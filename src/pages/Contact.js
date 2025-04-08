@@ -2,10 +2,7 @@ import React, { useRef } from 'react';
 import { FaFacebookF, FaWhatsapp, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { FaXTwitter } from "react-icons/fa6";
-<<<<<<< HEAD
 import bg from '../assets/contact.png'; // Verify image path is correct
-=======
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
 
 const ContactSection = () => {
   const form = useRef();
@@ -14,17 +11,10 @@ const ContactSection = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-<<<<<<< HEAD
       'service_1dz5979', // Replace with your EmailJS service ID
       'template_yafma1e', // Replace with your EmailJS template ID
       form.current,
       '-vb_3R7MG7YGlpJ9r' // Replace with your EmailJS user ID
-=======
-      'service_1dz5979', // Replace with actual Service ID
-      'template_yafma1e', // Replace with actual Template ID
-      form.current,
-      '-vb_3R7MG7YGlpJ9r' // Replace with actual Public Key
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
     )
     .then((result) => {
       console.log('Message sent:', result.text);
@@ -39,7 +29,6 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-<<<<<<< HEAD
       className="relative py-12 md:py-16"
       aria-labelledby="contact-heading"
     >
@@ -62,27 +51,11 @@ const ContactSection = () => {
               Get in Touch
             </h2>
             <p className="text-gray-800 text-sm md:text-base max-w-md mx-auto">
-=======
-      className="bg-gray-50 py-12 md:py-16"
-      aria-labelledby="contact-heading"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white/90 md:bg-white/50 md:backdrop-blur-sm rounded-xl shadow-sm p-6 md:p-8 lg:p-10 border border-white/20">
-          <div className="text-center mb-8 md:mb-10">
-            <h2
-              id="contact-heading"
-              className="text-2xl md:text-3xl font-bold text-gray-900 mb-2"
-            >
-              Get in Touch
-            </h2>
-            <p className="text-gray-600 text-sm md:text-base max-w-md mx-auto">
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
               Have questions or want to discuss a project? We're here to help.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-<<<<<<< HEAD
             {/* Contact Info Column */}
             <div className="space-y-6">
               <div className="space-y-4">
@@ -96,45 +69,17 @@ const ContactSection = () => {
                     <strong className="block font-medium text-gray-900">Phone</strong>
                     <a href="tel:01202977830" className="text-blue-600 hover:underline">
                       0120-2977830
-=======
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-gray-900">Contact Information</h3>
-                <ul className="space-y-3 text-sm text-gray-600">
-                  <li>
-                    <strong className="block font-medium text-gray-800">Address</strong>
-                    <span>Add- 216-221, 2nd Floor, Om Tower, Commercial Belt, Alpha-1, Greater Noida, U.P. India</span>
-                  </li>
-                  <li>
-                    <strong className="block font-medium text-gray-800">Phone</strong>
-                    <a
-                      href="tel:+1234567890"
-                      className="text-blue-600 hover:underline"
-                      aria-label="Call Us"
-                    >
-                       0120-2977830
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
                     </a>
                   </li>
                   <li>
                     <strong className="block font-medium text-gray-800">Email</strong>
-<<<<<<< HEAD
                     <a href="mailto:omconsultingltd@gmail.com" className="text-blue-600 hover:underline">
-=======
-                    <a
-                      href="mailto:omconsultingltd@gmail.com"
-                      className="text-blue-600 hover:underline"
-                      aria-label="Email Us"
-                    >
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
                       omconsultingltd@gmail.com
                     </a>
                   </li>
                 </ul>
               </div>
 
-<<<<<<< HEAD
               {/* Social Links */}
               <div className="pt-6 border-t border-gray-800">
                 <h3 className="text-base font-medium text-gray-900 mb-4">Follow Us</h3>
@@ -156,38 +101,11 @@ const ContactSection = () => {
                       <Icon className="w-5 h-5" />
                     </a>
                   ))}
-=======
-              <div className="pt-6 border-t border-gray-200">
-                <h3 className="text-base font-medium text-gray-900 mb-4">Follow Us</h3>
-                <div className="flex justify-center md:justify-start space-x-4">
-                  {[{ Icon: FaFacebookF, url: 'https://www.facebook.com/omconsultingpvtltd', color: 'hover:text-blue-600', label: 'Facebook' },
-                    { Icon: FaWhatsapp, url: 'https://whatsapp.com/channel/0029Vb8neRo9cDDdycTlwN1f', color: 'hover:text-green-500', label: 'WhatsApp' },
-                    { Icon: FaXTwitter, url: 'https://x.com/om_tec_solution?s=21', color: 'hover:text-black', label: 'Twitter' },
-                    { Icon: FaLinkedinIn, url: 'https://www.linkedin.com/company/omconsultingpvtltd', color: 'hover:text-blue-700', label: 'LinkedIn' },
-                    { Icon: FaInstagram, url: 'https://www.instagram.com/omconsultingpvtltd/', color: 'hover:text-pink-600', label: 'Instagram' }].map(
-                    ({ Icon, url, color, label }, index) => (
-                      <a
-                        key={index}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`text-gray-500 ${color} transition-colors`}
-                        aria-label={label}
-                      >
-                        <Icon className="w-5 h-5" />
-                      </a>
-                    )
-                  )}
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
                 </div>
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Contact Form Column */}
-=======
-            {/* Contact Form */}
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
             <div className="bg-white/90 md:bg-white/70 md:backdrop-blur-sm p-6 rounded-lg shadow-sm border border-white/30 max-w-md md:max-w-none mx-auto w-full">
               <form ref={form} onSubmit={sendEmail} className="space-y-4">
                 <div>
@@ -218,11 +136,7 @@ const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-<<<<<<< HEAD
                     Message
-=======
-                    Please Mention Your Requirements
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
                     <textarea
                       name="message"
                       rows="3"
@@ -242,15 +156,7 @@ const ContactSection = () => {
                   </button>
                   <p className="mt-3 text-xs text-gray-500 text-center">
                     By submitting, you agree to our{' '}
-<<<<<<< HEAD
                     <a href="/privacy-policy" className="text-blue-600 hover:underline">
-=======
-                    <a
-                      href="/privacy-policy"
-                      className="text-blue-600 hover:underline"
-                      aria-label="Privacy Policy"
-                    >
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
                       privacy policy
                     </a>
                   </p>
@@ -264,8 +170,4 @@ const ContactSection = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ContactSection;
-=======
-export default ContactSection;
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f

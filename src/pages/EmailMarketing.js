@@ -1,10 +1,6 @@
 import { FaEnvelope, FaBolt, FaChartBar } from "react-icons/fa";
 import email from "../assets/email/email.webp";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-=======
-
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
 const EmailMarketing = () => {
   return (
     <section id="email-marketing" className="bg-white py-16 px-6">
@@ -47,7 +43,6 @@ const EmailMarketing = () => {
           </div>
 
           {/* Call to Action */}
-<<<<<<< HEAD
           <div className="mt-12 text-center">
                            <Link
                                  to="/contact"
@@ -58,14 +53,6 @@ const EmailMarketing = () => {
                                  Get Started
                                </Link>
                          </div>
-=======
-          <a
-            href="/contact"
-            className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg text-lg shadow-lg transition duration-300"
-          >
-            Get a Free Email Strategy
-          </a>
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
         </div>
 
       </div>

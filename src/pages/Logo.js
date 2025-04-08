@@ -2,10 +2,7 @@ import React from "react";
 import logo from "../assets/design/logo.jpg"; // Custom Logo Design image
 import brand from "../assets/design/brand.jpg"; // Branding & Identity image
 import time from "../assets/design/time.jpg"; // Modern & Timeless image
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-=======
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
 
 const Logo = () => {
   return (
@@ -65,7 +62,6 @@ const Logo = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="mt-12 text-center">
                  <Link
                        to="/contact"
@@ -76,16 +72,6 @@ const Logo = () => {
                        Get Started
                      </Link>
                </div>
-=======
-        <div className="text-center mt-12">
-          <a
-            href="/contact"
-            className="bg-blue-600 text-white py-4 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300"
-          >
-            Get Your Logo Designed
-          </a>
-        </div>
->>>>>>> c437b642507f985f1faf64e6c7387d3d9b43992f
       </div>
     </section>
   );
