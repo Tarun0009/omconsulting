@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const TopBar = () => {
   const socialMedia = [
     {
@@ -27,6 +28,12 @@ const TopBar = () => {
       icon: 'fab fa-instagram',
       color: 'hover:text-[#e4405f]',
     },
+    {
+      name: 'X',
+      url: 'https://x.com/om_tec_solution?s=21',
+      icon: 'fab fa-x-twitter', // Font Awesome class for X (Twitter)
+      color: 'hover:text-white', // or use custom color if needed
+    }
   ];
 
   return (

@@ -5,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useState } from "react";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 import acgil from '../assets/clients/akshi.png';
 import akshi from '../assets/clients/acgil.jpg';
@@ -116,6 +117,26 @@ const clients = [
   
 
 const Hero = () => {
+  const form = useRef();
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm(
+        'service_1dz5979', // Replace with actual Service ID
+        'template_yafma1e', // Replace with actual Template ID
+        form.current,
+        '-vb_3R7MG7YGlpJ9r' // Replace with actual Public Key
+      )
+      .then((result) => {
+        console.log('Message sent:', result.text);
+        alert("Message sent successfully!");
+        form.current.reset();
+      }, (error) => {
+        console.error('Send error:', error.text);
+        alert("Failed to send message.");
+      });
+    };
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -138,7 +159,7 @@ const Hero = () => {
   return (
     <div className="relative">
       {/* Enhanced Slider Section */}
-      <div className="min-h-screen w-full">
+      <div className="w-full">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={0}
@@ -395,16 +416,16 @@ const Hero = () => {
 </SwiperSlide>
 
 {/* Navigation Controls */}
-<div className="swiper-button-next !text-white !w-12 !h-12 sm:!w-14 sm:!h-14 lg:!w-16 lg:!h-16 !rounded-full !bg-white/20 !backdrop-blur-sm hover:!bg-white/30 transition-colors after:!text-xl lg:after:!text-2xl shadow-xl"></div>
-<div className="swiper-button-prev !text-white !w-12 !h-12 sm:!w-14 sm:!h-14 lg:!w-16 lg:!h-16 !rounded-full !bg-white/20 !backdrop-blur-sm hover:!bg-white/30 transition-colors after:!text-xl lg:after:!text-2xl shadow-xl"></div>
+<div className="swiper-button-next !text-white !w-8 !h-8 sm:!w-8 sm:!h-10 lg:!w-12 lg:!h-12 !rounded-full !bg-white/20 !backdrop-blur-sm hover:!bg-white/30 transition-colors after:!text-xl lg:after:!text-2xl shadow-xl"></div>
+<div className="swiper-button-prev !text-white !w-8 !h-8 sm:!w-8 sm:!h-10 lg:!w-12 lg:!h-12 !rounded-full !bg-white/20 !backdrop-blur-sm hover:!bg-white/30 transition-colors after:!text-xl lg:after:!text-2xl shadow-xl"></div>
 
 {/* Pagination */}
-<div className="swiper-pagination !absolute !bottom-8 sm:!bottom-8 lg:!bottom-8 !left-0 !right-0 !z-8"></div>
+<div className="swiper-pagination !absolute !bottom-8 sm:!bottom-5 lg:!bottom-5 !left-0 !right-0 !z-5"></div>
 </Swiper>
       </div>
 
     {/* Why Choose Us */}
-    <div className="mt-3 bg-blue-50 p-4 rounded-xl shadow-lg">
+    <div className="mt-2 bg-blue-50 p-4 rounded-xl shadow-lg">
       <h2 className="text-3xl font-bold text-gray-900 text-center">
         Why Choose <span className="text-blue-600">OM Tech Solutions?</span>
       </h2>
@@ -501,40 +522,41 @@ const Hero = () => {
     </div>
     
     {/* Client Grid */}
-    <div className="overflow-hidden">
-  <motion.div
-    className="flex gap-8"
-    animate={{ x: ["0%", "-100%"] }}
-    transition={{
-      duration: 10,
-      ease: "linear",
-      repeat: Infinity,
-    }}
-  >
-    {clients.map((client, index) => (
+    <div className="overflow-hidden py-6">
       <motion.div
-        key={index}
-        className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center text-center min-w-[300px]"
-        whileHover={{ scale: 1.05 }}
+        className="flex gap-6 flex-nowrap w-max"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{
+          duration: 70,
+          ease: "linear",
+          repeat: Infinity,
+        }}
       >
-        {/* Client Image */}
-        <img
-          src={client.img}
-          alt={client.name}
-          className="w-24 h-24 rounded-full object-cover mb-4"
-        />
+        {/* Duplicate the list for seamless infinite scroll */}
+        {[...clients, ...clients].map((client, index) => (
+          <motion.div
+            key={index}
+            className="bg-white p-4 md:p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center text-center min-w-[180px] sm:min-w-[190px] md:min-w-[200px]"
+            whileHover={{ scale: 1.05 }}
+          >
+            {/* Client Image */}
+            <img
+              src={client.img}
+              alt={client.name}
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-3 md:mb-4"
+            />
 
-        {/* Client Name */}
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">
-          {client.name}
-        </h3>
+            {/* Client Name */}
+            <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">
+              {client.name}
+            </h3>
 
-        {/* Client Testimonial */}
-        <p className="text-gray-600">{client.testimonial}</p>
+            {/* Testimonial */}
+            <p className="text-xs md:text-sm text-gray-600">{client.testimonial}</p>
+          </motion.div>
+        ))}
       </motion.div>
-    ))}
-  </motion.div>
-</div>
+    </div>
 
       </div>
 </motion.section>
@@ -547,6 +569,7 @@ const Hero = () => {
   whileInView={{ opacity: 1 }}
 >
   <div className="max-w-5xl mx-auto px-4">
+    <h1 className="text-center font-bold py-3 mb-3 text-2xl md:text-3xl text-black"> CONTACT US</h1>
     <div className="grid md:grid-cols-2 gap-8 items-stretch">
       
       {/* Left Content - Digital Marketing Info */}
@@ -567,50 +590,67 @@ const Hero = () => {
       </div>
 
       {/* Right Column - Contact Form */}
-      <div className="bg-gray-100 rounded-xl p-6 shadow-md">
-        <h2 className="text-2xl font-semibold text-gray-900 text-center mb-4">
-          Contact Us
-        </h2>
-        <form className="space-y-4">
-          {/* Name */}
-          <div>
-            <label className="block text-gray-700 mb-1">Name*</label>
-            <input 
-              type="text" 
-              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
+      <div className="bg-white/90 md:bg-white/70 md:backdrop-blur-sm p-6 rounded-lg shadow-sm border border-white/30 max-w-md md:max-w-none mx-auto w-full">
+              <form ref={form} onSubmit={sendEmail} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Name
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm bg-white/50"
+                      placeholder="Your name"
+                    />
+                  </label>
+                </div>
 
-          {/* Phone */}
-          <div>
-            <label className="block text-gray-700 mb-1">Phone*</label>
-            <input 
-              type="tel" 
-              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm bg-white/50"
+                      placeholder="your@email.com"
+                    />
+                  </label>
+                </div>
 
-          {/* Message */}
-          <div>
-            <label className="block text-gray-700 mb-1">Message*</label>
-            <textarea 
-              rows="3"
-              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-              required
-            ></textarea>
-          </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Please Mention Your Requirements
+                    <textarea
+                      name="message"
+                      rows="3"
+                      required
+                      className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 text-sm bg-white/50"
+                      placeholder="Your message..."
+                    />
+                  </label>
+                </div>
 
-          {/* Submit Button */}
-          <button 
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+                <div>
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors shadow-sm text-sm"
+                  >
+                    Send Message
+                  </button>
+                  <p className="mt-3 text-xs text-gray-500 text-center">
+                    By submitting, you agree to our{' '}
+                    <a
+                      href="/privacy-policy"
+                      className="text-blue-600 hover:underline"
+                      aria-label="Privacy Policy"
+                    >
+                      privacy policy
+                    </a>
+                  </p>
+                </div>
+              </form>
+            </div>
     </div>
   </div>
 </motion.section>

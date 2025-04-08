@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { FaFacebookF, FaWhatsapp, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import { FaXTwitter } from "react-icons/fa6";
 
 const ContactSection = () => {
   const form = useRef();
@@ -82,6 +83,7 @@ const ContactSection = () => {
                 <div className="flex justify-center md:justify-start space-x-4">
                   {[{ Icon: FaFacebookF, url: 'https://www.facebook.com/omconsultingpvtltd', color: 'hover:text-blue-600', label: 'Facebook' },
                     { Icon: FaWhatsapp, url: 'https://whatsapp.com/channel/0029Vb8neRo9cDDdycTlwN1f', color: 'hover:text-green-500', label: 'WhatsApp' },
+                    { Icon: FaXTwitter, url: 'https://x.com/om_tec_solution?s=21', color: 'hover:text-black', label: 'Twitter' },
                     { Icon: FaLinkedinIn, url: 'https://www.linkedin.com/company/omconsultingpvtltd', color: 'hover:text-blue-700', label: 'LinkedIn' },
                     { Icon: FaInstagram, url: 'https://www.instagram.com/omconsultingpvtltd/', color: 'hover:text-pink-600', label: 'Instagram' }].map(
                     ({ Icon, url, color, label }, index) => (
