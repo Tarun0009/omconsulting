@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
+import Blog from "../pages/Blog";
 
 import acgil from '../assets/clients/akshi.png';
 import akshi from '../assets/clients/acgil.jpg';
@@ -701,64 +702,7 @@ const Hero = () => {
 
 
       {/* Knowledge Hub */}
-      <motion.section 
-  className="py-20 bg-gray-50"
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
->
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl font-bold mb-4">Digital Marketing Insights</h2>
-      <p className="text-gray-600 max-w-2xl mx-auto">
-        Latest trends, strategies, and best practices in digital transformation
-      </p>
-    </div>
-    <div className="grid md:grid-cols-3 gap-8">
-      {[
-        { 
-          title: 'SEO in 2025: AI-Driven Strategies', 
-          excerpt: 'Explore how machine learning is revolutionizing search optimization',
-          tag: 'SEO',
-          link: 'https://www.searchenginejournal.com/ai-seo-trends-2024/494212/'
-        },
-        { 
-          title: 'Social Media Algorithms Decoded', 
-          excerpt: 'Master platform algorithms for maximum organic reach',
-          tag: 'Social',
-          link: 'https://blog.hootsuite.com/social-media-algorithms-2024/'
-        },
-        { 
-          title: 'Conversion Rate Optimization', 
-          excerpt: 'Proven techniques to boost your website conversion rates',
-          tag: 'CRO',
-          link: 'https://www.optimizely.com/optimization-glossary/conversion-rate-optimization/'
-        }
-      ].map((post, index) => (
-        <motion.div
-          key={index}
-          className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: index * 0.1 }}
-        >
-          <span className="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm mb-4">
-            {post.tag}
-          </span>
-          <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-          <p className="text-gray-600 mb-4">{post.excerpt}</p>
-          <a 
-            href={post.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-700 font-medium"
-          >
-            Read Article →
-          </a>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</motion.section>
+      <Blog/>
     </div>
   );
 };

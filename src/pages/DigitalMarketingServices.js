@@ -112,29 +112,37 @@ const DigitalMarketingServices = () => {
 
           {/* Scrolling Services */}
           <div className="relative w-full overflow-hidden mx-auto mb-12">
-            <motion.div
-              className="flex space-x-4 md:space-x-6"
-              animate={controls}
-              onMouseEnter={() => controls.stop()}
-              onMouseLeave={() =>
-                controls.start({ x: ["0%", "-100%"], transition: { ease: "linear", repeat: Infinity, duration: 15 } })
-              }
-            >
-              {[...services, ...services].map((service, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.05 }}
-                  className="min-w-[280px] md:min-w-[320px] bg-white rounded-xl shadow-md p-4 md:p-6"
-                >
-                  <Link to={service.path} className="block">
-                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-                    <p className="text-sm md:text-base text-gray-600 mb-3">{service.description}</p>
-                    <span className="text-blue-500 text-sm md:text-base font-medium">Learn More →</span>
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+  <motion.div
+    className="flex space-x-4 md:space-x-6"
+    animate={controls}
+    onMouseEnter={() => controls.stop()}
+    onMouseLeave={() =>
+      controls.start({
+        x: ["0%", "-100%"],
+        transition: {
+          ease: "linear",
+          repeat: Infinity,
+          duration: 8, // ✅ Increased speed
+        },
+      })
+    }
+  >
+    {[...services, ...services].map((service, index) => (
+      <motion.div
+        key={index}
+        whileHover={{ scale: 1.05 }}
+        className="min-w-[250px] sm:min-w-[280px] md:min-w-[320px] bg-white rounded-xl shadow-md p-4 md:p-6"
+      >
+        <Link to={service.path} className="block">
+          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
+          <p className="text-sm md:text-base text-gray-600 mb-3">{service.description}</p>
+          <span className="text-blue-500 text-sm md:text-base font-medium">Learn More →</span>
+        </Link>
+      </motion.div>
+    ))}
+  </motion.div>
+</div>
+
         </div>
 
         {/* Clients Section */}

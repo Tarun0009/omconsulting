@@ -7,6 +7,8 @@
     "@ant-design/icons": "^6.0.0",
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@portabletext/react": "^3.2.1",
+    "@sanity/client": "^6.28.4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
