@@ -3,18 +3,21 @@ import email from "../assets/email/email.webp";
 import { Link } from "react-router-dom";
 const EmailMarketing = () => {
   return (
-    <section id="email-marketing" className="bg-white py-16 px-6">
+    <section id="email-marketing" className="bg-white py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
         
         {/* Left: Image */}
-        <div className="w-full md:w-1/2">
-          <img
-            src={email}
-            alt="Effective Email Marketing Strategy"
-            className="w-full h-auto rounded-lg shadow-lg"
-            loading="lazy"
-          />
-        </div>
+<div className="w-full md:w-1/2 flex justify-center items-start p-3">
+  <div className="relative group overflow-hidden rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+    <img
+      src={email}
+      alt="Effective Email Marketing Strategy"
+      className="w-full h-auto rounded-2xl object-cover transition duration-500 group-hover:brightness-110 group-hover:contrast-105"
+      loading="lazy"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl"></div>
+  </div>
+</div>
 
         {/* Right: Content */}
         <div className="w-full md:w-1/2 space-y-5">
@@ -22,9 +25,10 @@ const EmailMarketing = () => {
             Smarter Email Campaigns, <span className="text-blue-600">Better Conversions</span>
           </h2>
           <p className="text-gray-600 text-lg">
-            OM Consultancy delivers high-performance email marketing strategies powered by AI-driven personalization and automation. 
-            We help businesses engage, convert, and grow with tailored campaigns.
-          </p>
+  OM Tech Solutions delivers high-performance email marketing strategies powered by AI-driven personalization and automation. 
+  We help businesses engage, convert, and grow with tailored campaigns. Our expert email marketing services focus on boosting open rates, improving click-through rates, and driving conversions through advanced segmentation and dynamic content. Whether you're launching a product, nurturing leads, or running re-engagement campaigns, our AI email automation ensures every message hits the mark.
+</p>
+
 
           {/* Features */}
           <div className="space-y-3">

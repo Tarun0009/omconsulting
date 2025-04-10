@@ -20,42 +20,21 @@ const SEO = () => {
               </span>
             </h1>
             <p className="text-base md:text-lg text-gray-600">
-              We offer expert solutions to boost your website’s visibility and drive organic traffic. 
-              With over 16 years of experience in providing top-notch SEO services in India, our team 
-              of skilled professionals is dedicated to delivering results that matter. Our strategies 
-              are designed to elevate your online presence, enhance customer engagement, and 
-              ultimately increase your revenue.
-            </p>
+  At <span className="font-semibold text-blue-600">OM Tech Solutions</span>, we specialize in delivering result-driven <strong>SEO services in India</strong> that increase your website’s visibility and drive qualified <strong>organic traffic</strong>. With over 16 years of proven expertise in <strong>on-page SEO, off-page optimization, technical SEO</strong>, and <strong>keyword research</strong>, our team ensures your business ranks higher on search engines like Google. We implement customized strategies to improve your <strong>search engine rankings</strong>, enhance <strong>website performance</strong>, and boost conversions. Partner with us to unlock the full potential of your online presence and dominate your niche.
+</p>
+
           </div>
 
           {/* Process */}
-          <div className="grid gap-2">
-            {[
-              { 
-                icon: '🔍', 
-                title: "Deep Market Analysis",
-                content: "1500+ keyword mapping with competitor benchmarking"
-              },
-              { 
-                icon: '⚙️', 
-                title: "Technical Optimization",
-                content: "Site speed boost • Mobile-first indexing • Schema markup"
-              },
-              { 
-                icon: '📈', 
-                title: "Sustainable Growth",
-                content: "Content clusters • Authoritative backlinks • Rank tracking"
-              }
-            ].map((step, index) => (
-              <div key={index} className="flex gap-4 p-4 md:p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-2xl md:text-3xl">{step.icon}</div>
-                <div>
-                  <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-sm md:text-base">{step.content}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="space-y-4 text-gray-700 text-base md:text-lg">
+  <p>
+    Our content-first approach focuses on building <strong>pillar pages</strong>, <strong>content clusters</strong>, and earning <strong>high-quality backlinks</strong> that establish domain authority and sustain long-term rankings. We don’t just rank your site — we help it stay ranked.
+  </p>
+  <p>
+    From regular <strong>rank tracking</strong> and performance reporting to ongoing optimization and strategy refinement, <span className="font-semibold text-blue-600">OM Tech Solutions</span> provides full-spectrum SEO services in India designed to deliver real business growth.
+  </p>
+</div>
+
         </div>
           {/* Strategy Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">

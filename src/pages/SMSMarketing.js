@@ -58,7 +58,7 @@ const SMSMarketing = () => {
               <span>Why Our SMS Campaigns Work</span>
             </h3>
             <p className="text-gray-700">
-              At <strong>OM Consultancy</strong>, we specialize in{" "}
+              At <strong>OM Tech Solutions</strong>, we specialize in{" "}
               <strong>high-converting</strong> SMS campaigns tailored to your
               business. Our expertise in{" "}
               <strong>customer segmentation, automation, and analytics</strong>{" "}
@@ -77,7 +77,7 @@ const SMSMarketing = () => {
               <span>Launch SMS Campaign</span>
             </a>
             <a
-              href="tel:+919999999999"
+              href="tel:0120-2977830"
               className="border border-blue-500 hover:border-blue-600 text-blue-700 hover:text-blue-800 py-3 px-6 rounded-lg text-center transition-colors"
             >
               📞 Get SMS Strategy Call

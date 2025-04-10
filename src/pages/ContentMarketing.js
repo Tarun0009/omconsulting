@@ -14,8 +14,9 @@ const ContentMarketing = () => {
             Content That Engages & Converts
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
-            <span className="font-semibold text-blue-600">OM Consultancy</span> crafts **SEO-driven, high-impact content** to boost brand visibility, captivate audiences, and drive measurable growth.
-          </p>
+  <span className="font-semibold text-blue-600">OM Tech Solutions</span> crafts <strong>SEO-driven, high-impact content</strong> to boost brand visibility, captivate audiences, and drive measurable growth. Our <strong>strategic content marketing services</strong> are tailored to align with your brand voice and engage your ideal audience across all digital platforms. From <strong>blog posts and landing pages</strong> to <strong>social media content and lead magnets</strong>, OM Tech Solutions ensures every piece is optimized for <strong>search engine rankings, user intent, and conversion</strong>. Empower your business with content that informs, inspires, and converts.
+</p>
+
         </div>
 
         {/* Content Section */}

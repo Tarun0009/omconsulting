@@ -10,7 +10,7 @@ const PaidAdvertising = () => {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
-        {/* Left: Image Section */}
+ {/* Left: Image Section */}
         <div className="w-full">
           <img
             src={paidad}
@@ -20,6 +20,7 @@ const PaidAdvertising = () => {
           />
         </div>
 
+
         {/* Right: Content Section */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -27,9 +28,12 @@ const PaidAdvertising = () => {
             <span className="text-blue-600">Paid Advertising</span>
           </h2>
           <p className="text-gray-700 text-lg mb-6">
-            Maximize your brand reach, drive conversions, and get a high ROI with targeted 
-            ad campaigns across Google, Facebook, Instagram, and more.
-          </p>
+  OM Tech Solutions maximizes your brand reach, drives quality leads, and boosts ROI with 
+  strategic ad campaigns across Google, Facebook, Instagram, and other high-converting platforms. 
+  Our performance-driven paid advertising services ensure every click counts by targeting the 
+  right audience with precision. With expert PPC management, conversion tracking, and A/B testing, 
+  we help you grow faster and smarter through digital advertising excellence.
+</p>
 
           {/* Key Benefits */}
           <div className="space-y-4">
