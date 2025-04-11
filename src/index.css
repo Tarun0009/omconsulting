@@ -1,4 +1,28 @@
 html {
     scroll-behavior: smooth;
   }
-  
+
+
+
+/* Swiper pagination dots styles */
+.swiper-pagination {
+  bottom: 0px !important;
+  margin-top: 1rem;
+  z-index: 10;
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  background: #cbd5e1;
+  opacity: 1;
+  margin: 0 4px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1d4ed8;
+}
+
+

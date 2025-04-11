@@ -20,7 +20,7 @@ import uronova from '../assets/clients/Uronova.png';
 //import { Link } from "react-router-dom";
 
 const services = [
-  { path: "/seo", title: "SEO Services", description: "Boost your rankings with expert SEO solutions.", buttonText: "Click Me" },
+  { path: "/seo-optimization", title: "SEO Services", description: "Boost your rankings with expert SEO solutions.", buttonText: "Click Me" },
   { path: "/social-media-marketing", title: "Social Media Marketing", description: "Engage and grow your audience with social media strategies.", buttonText: "Click Me" },
   { path: "/content-marketing", title: "Content Marketing", description: "Create valuable content that drives results.", buttonText: "Click Me" },
   { path: "/paid-advertising", title: "Paid Advertising", description: "Maximize your ROI with targeted advertising campaigns.", buttonText: "Click Me" },
@@ -48,11 +48,19 @@ const DigitalMarketingServices = () => {
             </span>
           </h2>
           <div className="max-w-3xl mx-auto">
-            <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-              At <strong className="text-blue-600">OM Consultancy</strong>, we specialize in{" "}
-              <span className="font-semibold">result-driven digital marketing strategies</span>{" "}
-              designed to help businesses thrive in the competitive online landscape.
-            </p>
+          <p className="w-full text-base md:text-lg text-gray-700 mb-6 leading-relaxed text-left">
+  At <strong className="text-blue-600">OM Tech Solutions</strong>, we specialize in{" "}
+  <span className="font-semibold">result-driven digital marketing strategies</span>{" "}
+  designed to help businesses thrive in the competitive online landscape. Our{" "}
+  <span className="font-semibold">digital marketing services in 2025</span> are tailored to boost{" "}
+  <span className="font-semibold">online visibility, generate quality leads</span>, and enhance customer engagement across multiple platforms. 
+  From advanced <span className="font-semibold">SEO strategies</span> and paid advertising to social media growth and content marketing, 
+  we follow the latest <span className="font-semibold">2025 marketing trends</span> to ensure your brand stays ahead of the curve. 
+  Whether you're a startup or an established business, our solutions are designed to drive{" "}
+  <span className="font-semibold">measurable results</span> and long-term growth.
+</p>
+
+
           </div>
         </div>
 
@@ -111,37 +119,29 @@ const DigitalMarketingServices = () => {
           </div>
 
           {/* Scrolling Services */}
-          <div className="relative w-full overflow-hidden mx-auto mb-12">
-  <motion.div
-    className="flex space-x-4 md:space-x-6"
-    animate={controls}
-    onMouseEnter={() => controls.stop()}
-    onMouseLeave={() =>
-      controls.start({
-        x: ["0%", "-100%"],
-        transition: {
-          ease: "linear",
-          repeat: Infinity,
-          duration: 8, // ✅ Increased speed
-        },
-      })
-    }
-  >
-    {[...services, ...services].map((service, index) => (
-      <motion.div
+          <div className="w-full mx-auto mb-12 px-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {services.map((service, index) => (
+      <div
         key={index}
-        whileHover={{ scale: 1.05 }}
-        className="min-w-[250px] sm:min-w-[280px] md:min-w-[320px] bg-white rounded-xl shadow-md p-4 md:p-6"
+        className="bg-white rounded-xl shadow-md p-4 md:p-6"
       >
         <Link to={service.path} className="block">
-          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-          <p className="text-sm md:text-base text-gray-600 mb-3">{service.description}</p>
-          <span className="text-blue-500 text-sm md:text-base font-medium">Learn More →</span>
+          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+            {service.title}
+          </h3>
+          <p className="text-sm md:text-base text-gray-600 mb-3">
+            {service.description}
+          </p>
+          <span className="text-blue-500 text-sm md:text-base font-medium">
+            Learn More →
+          </span>
         </Link>
-      </motion.div>
+      </div>
     ))}
-  </motion.div>
+  </div>
 </div>
+
 
         </div>
 

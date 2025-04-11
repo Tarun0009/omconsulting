@@ -470,41 +470,65 @@ const Hero = () => {
 
   {/* Swiper Slider */}
   <div className="relative w-full mt-8">
-    <Swiper
-      modules={[Autoplay, Navigation]}
-      spaceBetween={20}
-      slidesPerView={1.5}
-      breakpoints={{
-        640: { slidesPerView: 2 },
-        768: { slidesPerView: 3 },
-        1024: { slidesPerView: 4 },
-      }}
-      autoplay={{
-        delay: 0, // No delay between slides
-        disableOnInteraction: false, // Keeps autoplay running even after interaction
-        pauseOnMouseEnter: true, // Pause autoplay on hover
-      }}
-      speed={4000} // Controls smooth scrolling speed
-      loop={true} // Enables infinite scrolling
-      navigation // Enables next/prev buttons
-      className="pb-10"
-    >
-      {services.map((service, index) => (
-        <SwiperSlide key={index}>
-          <a href={service.link} className="no-underline">
+  <Swiper
+    modules={[Autoplay, Navigation, Pagination]}
+    spaceBetween={20}
+    slidesPerView={1.5}
+    breakpoints={{
+      640: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      1024: { slidesPerView: 4 },
+    }}
+    autoplay={{
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    }}
+    speed={4000}
+    loop={true}
+    navigation
+    pagination={{ clickable: true }}
+    className="pb-16 cursor-grab" // extra bottom padding for dots
+    aria-label="Service carousel"
+  >
+    {services.map((service, index) => (
+      <SwiperSlide key={index}>
+        <article>
+          <a
+            href={service.link}
+            className="no-underline"
+            aria-label={`Read more about ${service.title}`}
+          >
             <motion.div
-              className="bg-gray-100 p-6 rounded-xl hover:bg-gray-200 transition-colors min-w-[250px] flex-shrink-0 shadow-md cursor-pointer text-center"
+              className="bg-gray-100 p-5 sm:p-6 mb-7 rounded-xl hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-300 min-w-[250px] flex-shrink-0 shadow-md cursor-pointer text-center"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <div className="text-3xl md:text-4xl mb-4">{service.icon}</div>
+
+              <h3 className="text-base md:text-xl font-semibold mb-2 text-gray-800">
+                {service.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm md:text-base">
+                {service.description}
+              </p>
+
+              {service.img && (
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="mt-4 mx-auto rounded-lg max-h-40 object-contain"
+                  loading="lazy"
+                />
+              )}
             </motion.div>
           </a>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
+        </article>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
 </motion.section>
 
 
@@ -525,40 +549,37 @@ const Hero = () => {
     
     {/* Client Grid */}
     <div className="overflow-hidden py-6">
+  <motion.div
+    className="flex gap-6 flex-nowrap w-max"
+    animate={{ x: ["0%", "-100%"] }}
+    transition={{
+      duration: 70,
+      ease: "linear",
+      repeat: Infinity,
+    }}
+  >
+    {[...clients, ...clients].map((client, index) => (
       <motion.div
-        className="flex gap-6 flex-nowrap w-max"
-        animate={{ x: ["0%", "-100%"] }}
-        transition={{
-          duration: 70,
-          ease: "linear",
-          repeat: Infinity,
-        }}
+        key={index}
+        className="bg-white p-3 md:p-4 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center text-center min-w-[130px] sm:min-w-[140px] md:min-w-[150px] max-w-[150px]"
+        whileHover={{ scale: 1.05 }}
       >
-        {/* Duplicate the list for seamless infinite scroll */}
-        {[...clients, ...clients].map((client, index) => (
-          <motion.div
-            key={index}
-            className="bg-white p-4 md:p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center text-center min-w-[180px] sm:min-w-[190px] md:min-w-[200px]"
-            whileHover={{ scale: 1.05 }}
-          >
-            {/* Client Image */}
-            <img
-              src={client.img}
-              alt={client.name}
-              className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-3 md:mb-4"
-            />
-
-            {/* Client Name */}
-            <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">
-              {client.name}
-            </h3>
-
-            {/* Testimonial */}
-            <p className="text-xs md:text-sm text-gray-600">{client.testimonial}</p>
-          </motion.div>
-        ))}
+        <img
+          src={client.img}
+          alt={client.name}
+          className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover mb-2 md:mb-3"
+        />
+        <h3 className="text-sm md:text-base font-semibold text-gray-900 mb-1 break-words">
+          {client.name}
+        </h3>
+        <p className="text-xs md:text-sm text-gray-600 break-words whitespace-normal leading-snug">
+          {client.testimonial}
+        </p>
       </motion.div>
-    </div>
+    ))}
+  </motion.div>
+</div>
+
 
       </div>
 </motion.section>
