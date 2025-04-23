@@ -6,6 +6,7 @@ import TopBar from "./components/TopBar";
 import Hero from "./components/Hero";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import SinglePost from "./pages/SinglePost";
+import usePageTracking from "./usePageTracking"; // 
 
 // Lazy Loaded Pages
 const About = lazy(() => import("./pages/About"));
@@ -30,12 +31,12 @@ const ContactSection = lazy(() => import("./pages/Contact"));
 
 const Layout = () => {
   const location = useLocation();
+  usePageTracking(); 
 
   return (
     <>
       <Navbar />
       <TopBar />
-      {/* Show Hero only on Home Page */}
       {location.pathname === "/" && <Hero />}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
@@ -57,9 +58,8 @@ const Layout = () => {
           <Route path="/banner-designing" element={<Banner />} />
           <Route path="/social-media-designing" element={<SocialMediaDesigning />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<SinglePost />}/>
+          <Route path="/blog/:slug" element={<SinglePost />} />
           <Route path="/contact" element={<ContactSection />} />
-          {/* Redirect to home if unknown route */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>

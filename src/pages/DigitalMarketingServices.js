@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-
+import cbs from '../assets/clients/cbs.jpeg';
 import acgil from '../assets/clients/akshi.png';
 import akshi from '../assets/clients/acgil.jpg';
 import apna from '../assets/clients/apna.jpg';
@@ -10,7 +10,7 @@ import design from '../assets/clients/design.png';
 import energy from '../assets/clients/energy.JPG';
 import garg from '../assets/clients/garg.jpg';
 import gs from '../assets/clients/gs.png';
-import jaipuria from '../assets/clients/jaipuria.jpeg';
+import jaipuria from '../assets/clients/jaipuriaarts.jpeg';
 import patanjali from '../assets/clients/patanjali.jpeg';
 import pharma from '../assets/clients/pharma.jpg';
 import rasoi from '../assets/clients/rasoi.png';
@@ -164,7 +164,7 @@ const DigitalMarketingServices = () => {
         repeat: Infinity,
       }}
     >
-      {[patanjali, acgil, akshi, apna, ctdesign, design, energy, garg, gs, jaipuria, patanjali, pharma, rasoi, rojgar, ssf, uronova].map(
+      {[patanjali, acgil, akshi, apna,cbs, ctdesign, design, energy, garg, gs, jaipuria, patanjali, pharma, rasoi, rojgar, ssf, uronova].map(
         (clientImage, index) => (
           <motion.div
             key={index}

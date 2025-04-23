@@ -7,9 +7,10 @@ import apna from '../assets/clients/apna.jpg';
 import ctdesign from '../assets/clients/ctdesign.png';
 import design from '../assets/clients/design.png';
 import energy from '../assets/clients/energy.JPG';
+import cbs from '../assets/clients/cbs.jpeg';
 import garg from '../assets/clients/garg.jpg';
 import gs from '../assets/clients/gs.png';
-import jaipuria from '../assets/clients/jaipuria.jpeg';
+import jaipuria from '../assets/clients/jaipuriaarts.jpeg';
 import patanjali from '../assets/clients/patanjali.jpeg';
 import pharma from '../assets/clients/pharma.jpg';
 import rasoi from '../assets/clients/rasoi.png';
@@ -201,7 +202,7 @@ const Development = () => {
                 repeat: Infinity,
               }}
             >
-              {[patanjali, acgil, akshi, apna, ctdesign, design, energy, garg, gs, jaipuria, patanjali, pharma, rasoi, rojgar, ssf, uronova].map(
+              {[patanjali, acgil, akshi, apna, ctdesign, design,cbs, energy, garg, gs, jaipuria, patanjali, pharma, rasoi, rojgar, ssf, uronova].map(
                 (clientImage, index) => (
                   <motion.div
                     key={index}

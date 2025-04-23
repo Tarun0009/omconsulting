@@ -70,10 +70,10 @@ const WhatsappMarketing = () => {
               <span>Get Started on WhatsApp</span>
             </a>
             <a
-              href="tel:0120-2977830"
+              href="tel:8130068103"
               className="border border-gray-400 hover:border-gray-600 py-3 px-6 rounded-lg text-center transition-colors text-gray-700 shadow-sm"
             >
-              📞 Call Us: 0120-2977830
+              📞 Call Us: +91 8130068103
             </a>
           </div>
         </div>

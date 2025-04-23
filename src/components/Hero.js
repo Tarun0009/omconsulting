@@ -7,7 +7,7 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import Blog from "../pages/Blog";
-
+import cbs from '../assets/clients/cbs.jpeg';
 import acgil from '../assets/clients/akshi.png';
 import akshi from '../assets/clients/acgil.jpg';
 import apna from '../assets/clients/apna.jpg';
@@ -16,7 +16,7 @@ import design from '../assets/clients/design.png';
 import energy from '../assets/clients/energy.JPG';
 import garg from '../assets/clients/garg.jpg';
 import gs from '../assets/clients/gs.png';
-import jaipuria from '../assets/clients/jaipuria.jpeg';
+import jaipuria from '../assets/clients/jaipuriaarts.jpeg';
 import patanjali from '../assets/clients/patanjali.jpeg';
 import pharma from '../assets/clients/pharma.jpg';
 import rasoi from '../assets/clients/rasoi.png';
@@ -24,8 +24,6 @@ import rojgar from '../assets/clients/rojgar.jpg';
 import ssf from '../assets/clients/SSF.jpg';
 import uronova from '../assets/clients/Uronova.png';
 
-
-//import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -100,25 +98,92 @@ const faqs = [
 
 
 const clients = [
-    { name: 'TechCorp', img: acgil, testimonial: '“Organic traffic surged by 300% in just 6 months. Their SEO game is unmatched.”' },
-    { name: 'HealthPlus', img: akshi, testimonial: '“We saw $1.2M in revenue with their PPC strategy. Results-driven and sharp!”' },
-    { name: 'EduFuture', img: apna, testimonial: '“Social engagement tripled in 3 months. Their creative approach truly works.”' },
-    { name: 'GreenMart', img: ctdesign, testimonial: '“180% boost in online sales thanks to their SEO campaigns. Simply brilliant.”' },
-    { name: 'FinSecure', img: design, testimonial: '“UX improvements reduced bounce rate by 45%. Users love the new flow.”' },
-    { name: 'TravelNest', img: energy, testimonial: '“Got 4x ROI on ads in under 2 months. Their targeting is laser-focused.”' },
-    { name: 'FashionBloom', img: garg, testimonial: '“Gained 25K followers organically. Their Instagram strategies are gold.”' },
-    { name: 'AutoPro', img: gs, testimonial: '“Generated 50K+ leads through Google Ads. These guys know performance.”' },
-    { name: 'FoodiesHub', img: jaipuria, testimonial: '“Customer retention doubled with their email flow. Smart and effective.”' },
-    { name: 'BuildRight', img: patanjali, testimonial: '“Our cost-per-lead was cut in half. Their targeting was spot on.”' },
-    { name: 'WellNest', img: pharma, testimonial: '“Ranked in top 3 Google results for 15+ keywords. Amazing SEO team!”' },
-    { name: 'NextGen Solutions', img: rasoi, testimonial: '“Lead gen costs down by 35%. Their strategy really delivers.”' },
-    { name: 'MarketGuru', img: rojgar, testimonial: '“Hit 500K monthly visitors in 4 months. Insane growth!”' },
-    { name: 'HomeVista', img: ssf, testimonial: '“E-commerce conversions doubled. Their CRO magic works wonders.”' },
-    { name: 'MediTech', img: uronova, testimonial: '“UI/UX overhaul reduced bounce rates by 45%. Clean and modern.”' },
-  ];
-  
+  {
+    name: 'ACG Infotech Limited',
+    img: acgil,
+    testimonial: '“OM Tech Solutions helped us increase our organic traffic by over 300% in just six months. Their SEO expertise and execution have significantly improved our digital footprint.”'
+  },
+  {
+    name: 'Akshi Enterprises',
+    img: akshi,
+    testimonial: '“Thanks to their result-driven PPC strategies, we generated over $1.2M in revenue. Their targeting precision and campaign optimization were exceptional.”'
+  },
+  {
+    name: 'Apna Bazar',
+    img: apna,
+    testimonial: '“OM Tech Solutions boosted our social media engagement threefold in just 90 days. Their content strategy brought our brand closer to the community.”'
+  },
+  {
+    name: 'Renewu World',
+    img: ctdesign,
+    testimonial: '“Our online sales skyrocketed by 180% due to their tailored SEO campaigns. They understood our brand and delivered beyond expectations.”'
+  },
+  {
+    name: 'Design N Details',
+    img: design,
+    testimonial: '“Their UX redesign reduced our bounce rate by 45% and enhanced the overall user experience. Our visitors now stay longer and convert better.”'
+  },
+  {
+    name: 'Energy Expert',
+    img: energy,
+    testimonial: '“With OM Tech Solutions’ ad strategy, we saw a 4x ROI in under two months. Their ad placement and audience targeting were spot-on.”'
+  },
+  {
+    name: 'Garg Darwaje wale Noida',
+    img: garg,
+    testimonial: '“We grew our Instagram followers by 25K organically. Their social strategy was not only innovative but aligned perfectly with our brand’s voice.”'
+  },
+  {
+    name: 'Gautam Solutions',
+    img: gs,
+    testimonial: '“Their Google Ads campaigns generated over 50,000 quality leads. OM Tech Solutions truly understands high-performance marketing.”'
+  },
+  {
+    name: 'Jaipuria Arts',
+    img: jaipuria,
+    testimonial: '“Our customer retention doubled after implementing their email automation workflows. Personalized and timely—exactly what we needed.”'
+  },
+  {
+    name: 'Patanjali Renewable Energy Pvt Ltd',
+    img: patanjali,
+    testimonial: '“We reduced our cost-per-lead by more than 50% with their expert targeting. They helped us scale our reach efficiently.”'
+  },
+  {
+    name: 'Pharma Health Academy',
+    img: pharma,
+    testimonial: '“With their help, we ranked in the top 3 on Google for over 15 high-volume keywords. Their SEO approach is data-driven and impactful.”'
+  },
+  {
+    name: 'Rasoi',
+    img: rasoi,
+    testimonial: '“Our cost per lead dropped by 35% while improving conversion rates. Their funnel strategy is practical and result-oriented.”'
+  },
+  {
+    name: 'Rojgar Sagar',
+    img: rojgar,
+    testimonial: '“We hit 500,000 monthly visitors in just 4 months. Their SEO and content marketing efforts drove unprecedented traffic growth.”'
+  },
+  {
+    name: 'Soumya Foundation',
+    img: ssf,
+    testimonial: '“Our e-commerce conversion rate doubled after implementing their CRO techniques. Their insights truly transformed our checkout experience.”'
+  },
+  {
+    name: 'Uronova Kidney Stone Hospital',
+    img: uronova,
+    testimonial: '“Their clean and user-friendly UI/UX redesign reduced our bounce rate by 45%. Patients now find it easier to navigate and book services.”'
+  },
+  {
+    name: 'CBS Technologies',
+    img: cbs,
+    testimonial: '“Their UI/UX overhaul significantly improved our user journey. With a 45% drop in bounce rate, our engagement metrics are better than ever.”'
+  }
+];
+
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   const form = useRef();
   
     const sendEmail = (e) => {
@@ -469,47 +534,43 @@ const Hero = () => {
   </div>
 
   {/* Swiper Slider */}
-  <div className="relative w-full mt-8">
-  <Swiper
-    modules={[Autoplay, Navigation, Pagination]}
-    spaceBetween={20}
-    slidesPerView={1.5}
-    breakpoints={{
-      640: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      1024: { slidesPerView: 4 },
-    }}
-    autoplay={{
-      delay: 0,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    }}
-    speed={4000}
-    loop={true}
-    navigation
-    pagination={{ clickable: true }}
-    className="pb-16 cursor-grab" // extra bottom padding for dots
-    aria-label="Service carousel"
-  >
-    {services.map((service, index) => (
-      <SwiperSlide key={index}>
-        <article>
-          <a
-            href={service.link}
-            className="no-underline"
-            aria-label={`Read more about ${service.title}`}
-          >
+  <div className="relative w-full py-12 px-4 md:px-12 bg-white">
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        spaceBetween={24}
+        slidesPerView={1.2}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        }}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        speed={3500}
+        loop={true}
+        navigation={true}
+        pagination={{ clickable: true }}
+        className="pb-16 cursor-grab"
+      >
+        {services.map((service, index) => (
+          <SwiperSlide key={index}>
             <motion.div
-              className="bg-gray-100 p-5 sm:p-6 mb-7 rounded-xl hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-300 min-w-[250px] flex-shrink-0 shadow-md cursor-pointer text-center"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white border border-gray-200 rounded-xl shadow-md p-6 flex flex-col items-center text-center h-full max-w-[280px] mx-auto"
             >
-              <div className="text-3xl md:text-4xl mb-4">{service.icon}</div>
+              {service.icon && (
+                <div className="text-3xl text-blue-600 mb-4">{service.icon}</div>
+              )}
 
-              <h3 className="text-base md:text-xl font-semibold mb-2 text-gray-800">
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
                 {service.title}
               </h3>
 
-              <p className="text-gray-600 text-sm md:text-base">
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
                 {service.description}
               </p>
 
@@ -517,17 +578,48 @@ const Hero = () => {
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="mt-4 mx-auto rounded-lg max-h-40 object-contain"
+                  className="w-full h-32 object-contain rounded-lg mb-4"
                   loading="lazy"
                 />
               )}
+
+              <a
+                href={service.link}
+                className="mt-auto inline-block text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition px-4 py-2 rounded-md"
+              >
+                Read More
+              </a>
             </motion.div>
-          </a>
-        </article>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* Optional: Custom Swiper Button Styling */}
+      <style>
+        {`
+          .swiper-button-prev,
+          .swiper-button-next {
+            color: #2563eb; /* blue-600 */
+            top: 45%;
+            z-index: 10;
+          }
+
+          .swiper-button-prev:hover,
+          .swiper-button-next:hover {
+            color: #1d4ed8; /* blue-700 */
+          }
+
+          .swiper-pagination-bullet {
+            background: #cbd5e1;
+            opacity: 1;
+          }
+
+          .swiper-pagination-bullet-active {
+            background: #2563eb;
+          }
+        `}
+      </style>
+    </div>
 
 </motion.section>
 
@@ -549,37 +641,38 @@ const Hero = () => {
     
     {/* Client Grid */}
     <div className="overflow-hidden py-6">
-  <motion.div
-    className="flex gap-6 flex-nowrap w-max"
-    animate={{ x: ["0%", "-100%"] }}
-    transition={{
-      duration: 70,
-      ease: "linear",
-      repeat: Infinity,
-    }}
-  >
-    {[...clients, ...clients].map((client, index) => (
       <motion.div
-        key={index}
-        className="bg-white p-3 md:p-4 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center text-center min-w-[130px] sm:min-w-[140px] md:min-w-[150px] max-w-[150px]"
-        whileHover={{ scale: 1.05 }}
+        className="flex gap-6 flex-nowrap w-max"
+        animate={isHovered ? { x: "0%" } : { x: ["0%", "-100%"] }}
+        transition={{
+          duration: 70,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        <img
-          src={client.img}
-          alt={client.name}
-          className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover mb-2 md:mb-3"
-        />
-        <h3 className="text-sm md:text-base font-semibold text-gray-900 mb-1 break-words">
-          {client.name}
-        </h3>
-        <p className="text-xs md:text-sm text-gray-600 break-words whitespace-normal leading-snug">
-          {client.testimonial}
-        </p>
+        {[...clients, ...clients].map((client, index) => (
+          <motion.div
+            key={index}
+            className="bg-white p-4 md:p-5 lg:p-6 rounded-2xl shadow-md hover:shadow-xl border border-gray-100 flex flex-col items-center text-center min-w-[220px] max-w-[240px] transition-transform duration-300 ease-in-out"
+            whileHover={{ scale: 1.05 }}
+          >
+            <img
+              src={client.img}
+              alt={client.name}
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-3"
+            />
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2 break-words">
+              {client.name}
+            </h3>
+            <p className="text-sm md:text-[15px] text-gray-600 leading-snug break-words whitespace-normal">
+              {client.testimonial}
+            </p>
+          </motion.div>
+        ))}
       </motion.div>
-    ))}
-  </motion.div>
-</div>
-
+    </div>
 
       </div>
 </motion.section>

@@ -12,10 +12,14 @@ const AppDev = () => {
         <h1 className="text-4xl font-extrabold text-gray-800 text-center mb-6">
           Mobile <span className="text-blue-600">App Development</span>
         </h1>
-        <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-          We specialize in crafting **high-performance mobile applications**. Whether it’s 
-          **Android, iOS, or cross-platform**, we bring your ideas to life.
-        </p>
+        <p className="text-center text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+  At <strong className="text-blue-600">OM Tech Solutions</strong>, we specialize in crafting 
+  <strong> high-performance mobile applications</strong> tailored to your business needs. Whether it’s 
+  <strong> Android, iOS, or cross-platform development</strong>, our team delivers intuitive, scalable, and user-centric solutions. 
+  We focus on <strong>custom mobile app development</strong> that enhances user engagement and drives digital growth. 
+  From idea to launch, <strong>OM Tech Solutions</strong> turns your vision into a powerful, functional mobile experience.
+</p>
+
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

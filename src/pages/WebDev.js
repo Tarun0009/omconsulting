@@ -23,9 +23,19 @@ const WebDev = () => {
               Solutions
             </span>
           </motion.h1>
-          <p className="text-gray-700 text-sm max-w-lg mx-auto">
-            High-performance websites designed to enhance engagement and drive business growth.
-          </p>
+          <p className="text-gray-700 text-base leading-relaxed px-4 md:px-8 lg:px-16">
+  At <strong className="text-blue-600">OM Tech Solutions</strong>, we specialize in building 
+  <strong> high-performance websites</strong> that not only look stunning but also deliver results. Our expert team focuses on 
+  <strong> responsive web design</strong>, ensuring a seamless experience across all devices. By implementing the latest 
+  <strong> web development technologies</strong>, we create websites that are fast, secure, and optimized for performance. 
+  Whether you're a startup or an established enterprise, our <strong>custom website development</strong> services are tailored 
+  to meet your unique business goals. We integrate <strong>SEO best practices</strong> to boost your online visibility and drive 
+  organic traffic. With a focus on <strong>user experience (UX)</strong> and <strong>conversion rate optimization</strong>, 
+  our websites are built to engage visitors and turn them into loyal customers. From dynamic landing pages to 
+  <strong>eCommerce solutions</strong> and content-rich platforms, we develop scalable, maintainable websites that grow with your business. 
+  <strong>OM Tech Solutions</strong> is your trusted partner for impactful digital presence and measurable growth.
+</p>
+
         </div>
 
         {/* Services Grid */}

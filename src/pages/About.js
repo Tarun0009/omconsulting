@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import founderImage from "../assets/aboutimg/founder.webp";
+//import founderImage from "../assets/aboutimg/founder.webp";
+import companyLogo from "../assets/comlogo.png";
 import team from "../assets/aboutimg/team.jpg";
-
+import cbs from '../assets/clients/cbs.jpeg';
 import acgil from '../assets/clients/akshi.png';
 import akshi from '../assets/clients/acgil.jpg';
 import apna from '../assets/clients/apna.jpg';
@@ -11,7 +12,7 @@ import design from '../assets/clients/design.png';
 import energy from '../assets/clients/energy.JPG';
 import garg from '../assets/clients/garg.jpg';
 import gs from '../assets/clients/gs.png';
-import jaipuria from '../assets/clients/jaipuria.jpeg';
+import jaipuria from '../assets/clients/jaipuriaarts.jpeg';
 import patanjali from '../assets/clients/patanjali.jpeg';
 import pharma from '../assets/clients/pharma.jpg';
 import rasoi from '../assets/clients/rasoi.png';
@@ -75,11 +76,11 @@ const About = () => {
 
         {/* Founder Section */}
         <div className="bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-lg p-6 text-center mb-12 max-w-md mx-auto">
-          <img src={founderImage} alt="Founder - Tarun Pratap Singh" className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white" />
+          <img src={companyLogo} alt="Founder - Praveen Kumar" className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white" />
           <blockquote className="text-base italic mb-4">
             "True digital transformation happens when every click, impression, and engagement directly contributes to business objectives."
           </blockquote>
-          <p className="font-semibold text-lg">Tarun Pratap Singh</p>
+          <p className="font-semibold text-lg">Praveen Kumar</p>
           <p className="text-yellow-400 text-sm">CEO & Growth Strategist</p>
         </div>
 {/* Our Clients */}
@@ -97,7 +98,7 @@ const About = () => {
       repeat: Infinity,
     }}
   >
-    {[patanjali, acgil, akshi, apna, ctdesign, design, energy, garg, gs, jaipuria, patanjali, pharma, rasoi, rojgar, ssf, uronova].map(
+    {[patanjali, acgil, akshi, apna, ctdesign, design,cbs, energy, garg, gs, jaipuria, patanjali, pharma, rasoi, rojgar, ssf, uronova].map(
       (clientImage, index) => (
         <motion.div
           key={index}

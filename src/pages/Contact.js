@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { FaFacebookF, FaWhatsapp, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF,  FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { FaXTwitter } from "react-icons/fa6";
 import bg from '../assets/contact.png'; // Verify image path is correct
@@ -67,14 +67,14 @@ const ContactSection = () => {
                   </li>
                   <li>
                     <strong className="block font-medium text-gray-900">Phone</strong>
-                    <a href="tel:01202977830" className="text-blue-600 hover:underline">
-                      0120-2977830
+                    <a href="tel:8130068103" className="text-blue-600 hover:underline">
+                     +91 8130068103
                     </a>
                   </li>
                   <li>
                     <strong className="block font-medium text-gray-800">Email</strong>
-                    <a href="mailto:omconsultingltd@gmail.com" className="text-blue-600 hover:underline">
-                      omconsultingltd@gmail.com
+                    <a href="mailto:contact@omtechsols.com" className="text-blue-600 hover:underline">
+                    contact@omtechsols.com
                     </a>
                   </li>
                 </ul>
@@ -86,7 +86,7 @@ const ContactSection = () => {
                 <div className="flex justify-center md:justify-start space-x-4">
                   {[
                     { Icon: FaFacebookF, url: '#', color: 'hover:text-blue-600 text-gray-800' },
-                    { Icon: FaWhatsapp, url: '#', color: 'hover:text-green-500 text-gray-800' },
+                  
                     { Icon: FaXTwitter, url: '#', color: 'hover:text-black text-gray-800' },
                     { Icon: FaLinkedinIn, url: '#', color: 'hover:text-blue-700 text-gray-800' },
                     { Icon: FaInstagram, url: '#', color: 'hover:text-pink-600 text-gray-800' }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Phone } from "lucide-react";
 
 const TopBar = () => {
   const socialMedia = [
@@ -9,12 +9,7 @@ const TopBar = () => {
       icon: 'fab fa-facebook-f',
       color: 'hover:text-[#1877f2]',
     },
-    {
-      name: 'WhatsApp',
-      url: 'https://whatsapp.com/channel/0029Vb8neRo9cDDdycTlwN1f',
-      icon: 'fab fa-whatsapp',
-      color: 'hover:text-[#25D366]',
-    },
+ 
     
     {
       name: 'LinkedIn',
@@ -24,15 +19,15 @@ const TopBar = () => {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/omconsultingpvtltd/',
+      url: 'https://www.instagram.com/om_tech__solutions?igsh=cDd3a3U3dGgwaGVl&utm_source=qr',
       icon: 'fab fa-instagram',
       color: 'hover:text-[#e4405f]',
     },
     {
       name: 'X',
       url: 'https://x.com/om_tec_solution?s=21',
-      icon: 'fab fa-x-twitter', // Font Awesome class for X (Twitter)
-      color: 'hover:text-white', // or use custom color if needed
+      icon: 'fab fa-x-twitter',
+      color: 'hover:text-white', 
     }
   ];
 
@@ -43,23 +38,24 @@ const TopBar = () => {
           {/* Contact Info */}
           <div className="flex items-center space-x-4">
             <a 
-              href="tel:0120-2977830" 
-              className="flex items-center hover:text-white transition-colors duration-300"
-              aria-label="Call us at 0120-2977830"
-            >
-              <i className="fas fa-phone-alt mr-2 text-sm" aria-hidden="true"></i>
-              <span className="text-sm"> 0120-2977830</span>
-            </a>
+  href="tel:8130068103" 
+  className="flex items-center hover:text-white transition-colors duration-300"
+  aria-label="Call us at 8130068103"
+>
+  <Phone className="w-4 h-4 mr-2 text-sm" aria-hidden="true" />
+  <span className="text-sm">+91 8130068103</span>
+</a>
+
             
             <span className="hidden md:inline-block text-gray-400">|</span>
             
             <a 
-              href="mailto:omconsultingltd@gmail.com"
+              href="mailto:contact@omtechsols.com"
               className="flex items-center hover:text-white transition-colors duration-300"
               aria-label="Email us at info@example.com"
             >
               <i className="fas fa-envelope mr-2 text-sm" aria-hidden="true"></i>
-              <span className="text-sm">omconsultingltd@gmail.com</span>
+              <span className="text-sm">contact@omtechsols.com</span>
             </a>
           </div>
 
