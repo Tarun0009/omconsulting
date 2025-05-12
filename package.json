@@ -1,7 +1,7 @@
 {
   "name": "omconsultancy",
   "version": "0.1.0",
-  "homepage": "https://github.com/Tarun0009/omconsulting",
+  "homepage":  "https://tarun0009.github.io/omconsulting",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
